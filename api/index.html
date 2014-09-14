@@ -152,6 +152,43 @@
             
             
             
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Advanced <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../advanced/overview/">Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../advanced/v2-refactor/">v2.0-refactor</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../advanced/reservoirs/">Reservoirs</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../advanced/writing-a-target/">Writing a Target</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../advanced/writing-a-metric/">Writing a Metric</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../advanced/thinking-about-time/">Thinking About Time</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../advanced/contributing/">Contributing</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
                 <li >
                     <a href="../about/">About</a>
                 </li>
@@ -193,9 +230,9 @@
     
         <li class="main active"><a href="#api">API</a></li>
         
-            <li><a href="#api-cvb-facade">API: C#/VB façade</a></li>
-        
             <li><a href="#healthchecks-metrics-probes">HealthChecks, Metrics, Probes</a></li>
+        
+            <li><a href="#c-vb-facade">C# &amp; VB façade</a></li>
         
     
     </ul>
@@ -237,7 +274,12 @@ let main argv =
   0
 </code></pre>
 
-<h2 id="api-cvb-facade">API: C#/VB façade</h2>
+<h2 id="healthchecks-metrics-probes">HealthChecks, Metrics, Probes</h2>
+<p>Health Checks are like probes, but know how to interpret the results into the
+warning-levels of <code>LogLevel</code>.</p>
+<p>Metrics: This is currently fairly well-working - have a look at the SQLHealthService for
+an example of a Probe.</p>
+<h2 id="c-vb-facade">C# &amp; VB façade</h2>
 <p>This facade is useful when you're using C# </p>
 <pre class="prettyprint well"><code class="powershell">Install-Package Intelliplan.Logary.CSharp -Pre
 </code></pre>
@@ -331,11 +373,6 @@ namespace Intelliplan.Logary.Specs.Examples
 }
 </code></pre>
 
-<h2 id="healthchecks-metrics-probes">HealthChecks, Metrics, Probes</h2>
-<p>Health Checks are like probes, but know how to interpret the results into the
-warning-levels of <code>LogLevel</code>.</p>
-<p>Metrics: This is currently fairly well-working - have a look at the SQLHealthService for
-an example of a Probe.</p>
 </div>
         </div>
 

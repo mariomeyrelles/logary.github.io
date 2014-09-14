@@ -152,6 +152,43 @@
             
             
             
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Advanced <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../advanced/overview/">Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../advanced/v2-refactor/">v2.0-refactor</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../advanced/reservoirs/">Reservoirs</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../advanced/writing-a-target/">Writing a Target</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../advanced/writing-a-metric/">Writing a Metric</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../advanced/thinking-about-time/">Thinking About Time</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../advanced/contributing/">Contributing</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
                 <li >
                     <a href="../../about/">About</a>
                 </li>
@@ -193,31 +230,31 @@
     
         <li class="main active"><a href="#targets-overview">Targets Overview</a></li>
         
-            <li><a href="#target-logarytextwriter-builtin">Target: Logary.TextWriter builtin</a></li>
+            <li><a href="#textwriter">TextWriter</a></li>
         
-            <li><a href="#target-logaryconsole-builtin">Target: Logary.Console builtin</a></li>
+            <li><a href="#console">Console</a></li>
         
-            <li><a href="#target-logarydebugger-builtin">Target: Logary.Debugger builtin</a></li>
+            <li><a href="#debugger">Debugger</a></li>
         
-            <li><a href="#target-logarylogstash-builtin">Target: Logary.Logstash builtin</a></li>
+            <li><a href="#logstash">Logstash</a></li>
         
-            <li><a href="#target-logarygraphite-builtin">Target: Logary.Graphite builtin</a></li>
+            <li><a href="#graphite">Graphite</a></li>
         
-            <li><a href="#target-logaryelmahio">Target: Logary.ElmahIO</a></li>
+            <li><a href="#elmahio">Elmah.IO</a></li>
         
-            <li><a href="#target-logarylogentries">Target: Logary.Logentries</a></li>
+            <li><a href="#logentries">Logentries</a></li>
         
-            <li><a href="#target-logaryloggr">Target: Logary.Loggr</a></li>
+            <li><a href="#loggr">Loggr</a></li>
         
-            <li><a href="#target-logaryriemann">Target: Logary.Riemann</a></li>
+            <li><a href="#riemann">Riemann</a></li>
         
-            <li><a href="#target-logarydb">Target: Logary.DB</a></li>
+            <li><a href="#db">DB</a></li>
         
-            <li><a href="#target-logarynimrod-builtin">Target: Logary.Nimrod builtin</a></li>
+            <li><a href="#nimrod">Nimrod</a></li>
         
-            <li><a href="#target-logarydash">Target: Logary.Dash</a></li>
+            <li><a href="#dash">Dash</a></li>
         
-            <li><a href="#target-logaryzipkin">Target: Logary.Zipkin</a></li>
+            <li><a href="#zipkin">Zipkin</a></li>
         
     
     </ul>
@@ -225,44 +262,42 @@
             <div class="col-md-9" role="main">
 
 <h1 id="targets-overview">Targets Overview</h1>
-<h4 id="target-logarytextwriter-builtin">Target: Logary.TextWriter <em>builtin</em></h4>
-<p><strong>For LogLines</strong></p>
+<p>These are the targets supported by Logary. If you write a target, then send a PR
+towards this documentation and everyone can enjoy using it!</p>
+<h2 id="textwriter">TextWriter</h2>
+<p><strong>For LogLines | builtin</strong></p>
 <p>Write to any text writer - such as one from <code>System.IO.File.OpenWrite</code>.</p>
-<p><strong>Part of the core assembly:</strong></p>
 <pre class="prettyprint well"><code class="powershell">Install-Package Intelliplan.Logary -Pre
 </code></pre>
 
-<h4 id="target-logaryconsole-builtin">Target: Logary.Console <em>builtin</em></h4>
-<p><strong>For LogLines</strong></p>
+<h2 id="console">Console</h2>
+<p><strong>For LogLines | builtin</strong></p>
 <p>Writes output messages to <code>System.Console.Out</code> and Error, and Fatal LogLines
 to <code>System.Console.Error</code>.</p>
-<p><strong>Part of the core assembly:</strong></p>
 <pre class="prettyprint well"><code class="powershell">Install-Package Intelliplan.Logary -Pre
 </code></pre>
 
-<h4 id="target-logarydebugger-builtin">Target: Logary.Debugger <em>builtin</em></h4>
-<p><strong>For LogLines</strong></p>
+<h2 id="debugger">Debugger</h2>
+<p><strong>For LogLines | builtin</strong></p>
 <p>Writes all output to the Debugger-console of Visual Studio, Xamarin Studio or
 MonoDevelop.</p>
-<p><strong>Part of the core assembly:</strong></p>
 <pre class="prettyprint well"><code class="powershell">Install-Package Intelliplan.Logary -Pre
 </code></pre>
 
-<h4 id="target-logarylogstash-builtin">Target: Logary.Logstash <em>builtin</em></h4>
-<p><strong>For LogLines</strong></p>
+<h2 id="logstash">Logstash</h2>
+<p><strong>For LogLines | builtin</strong></p>
 <p>This is the most mature target that we use the most at Intelliplan. Logstash is
 a log router that can move your logs to the best location available.</p>
 <blockquote>
 <p><strong>Manage events and logs</strong>. Elasticsearch works seamlessly with Logstash to
 collect, parse, index, and search logs</p>
 </blockquote>
-<p><strong>Part of the core assembly:</strong></p>
 <pre class="prettyprint well"><code class="powershell">Install-Package Intelliplan.Logary -Pre
 </code></pre>
 
 <p><img alt="Logstash" src="https://raw.githubusercontent.com/logary/logary-assets/master/targets/logstash.png" /></p>
-<h4 id="target-logarygraphite-builtin">Target: Logary.Graphite <em>builtin</em></h4>
-<p><strong>For Measures</strong></p>
+<h2 id="graphite">Graphite</h2>
+<p><strong>For Measures | builtin</strong></p>
 <p>The <a href="http://graphite.wikidot.com/faq">graphite</a> target is a mature target for
 sending Measures from your application.</p>
 <blockquote>
@@ -279,12 +314,11 @@ interfaces.</p>
 InfluxDB &amp; OpenTSDB. Rich graphing: Fast and flexible client side graphs with
 a multitude of options.</p>
 </blockquote>
-<p><img alt="Grafana" src="https://raw.githubusercontent.com/logary/logary-assets/master/targets/grafana.png" /></p>
-<p><strong>Part of the core assembly:</strong></p>
 <pre class="prettyprint well"><code class="powershell">Install-Package Intelliplan.Logary -Pre
 </code></pre>
 
-<h4 id="target-logaryelmahio">Target: Logary.ElmahIO</h4>
+<p><img alt="Grafana" src="https://raw.githubusercontent.com/logary/logary-assets/master/targets/grafana.png" /></p>
+<h2 id="elmahio">Elmah.IO</h2>
 <p><strong>For LogLines</strong></p>
 <p>Interop target if you are writing a web application and have
 <a href="https://elmah.io/">Elmah.IO</a> as your log dashboard. <span title="Unless you're
@@ -295,7 +329,7 @@ targets">.Net developer friendly indeed</span>.</p>
 </code></pre>
 
 <p><img alt="Elmah.IO" src="https://raw.githubusercontent.com/logary/logary-assets/master/targets/elmahio.png" /></p>
-<h4 id="target-logarylogentries">Target: Logary.Logentries</h4>
+<h2 id="logentries">Logentries</h2>
 <p><strong>For LogLines and Measures</strong></p>
 <blockquote>
 <p>Fast Search &amp; Real-time Log Processing - Centralized search, aggregation, and
@@ -306,7 +340,7 @@ correlation. See query results in seconds.</p>
 
 <p>All logging to Logentries is encrypted.</p>
 <p><img alt="Logentries" src="https://raw.githubusercontent.com/logary/logary-assets/master/targets/logentries.png" /></p>
-<h4 id="target-logaryloggr">Target: Logary.Loggr</h4>
+<h2 id="loggr">Loggr</h2>
 <p><strong>For LogLines</strong></p>
 <blockquote>
 <p><strong>Monitor Your Web Apps in Realtime</strong>
@@ -317,7 +351,7 @@ analytics, notifications and more</p>
 </code></pre>
 
 <p><img alt="Loggr" src="https://raw.githubusercontent.com/logary/logary-assets/master/targets/loggr.png" /></p>
-<h4 id="target-logaryriemann">Target: Logary.Riemann</h4>
+<h2 id="riemann">Riemann</h2>
 <p><strong>For Measures</strong></p>
 <p>This target writes Measures to Riemann and is being used for sending metrics
 from SQLServerHealth, for example. Sending them to riemann gives a platform to
@@ -337,7 +371,7 @@ servers and applications with a powerful stream processing language.</p>
 client</a>
 for Riemann, to make it stable and to make it fit well with Logary's
 actor-based approach. More usage examples on this will follow.</p>
-<h4 id="target-logarydb">Target: Logary.DB</h4>
+<h2 id="db">DB</h2>
 <p><strong>For LogLines and Measures</strong></p>
 <p>This target logs asynchronously to a database, using ADO.Net. You can configure
 any connection factory through the target's configuration.</p>
@@ -347,8 +381,8 @@ state for both logs and metrics on boot, if not already existent.</p>
 Install-Package Intelliplan.Logary.DB.Migrations -Pre
 </code></pre>
 
-<h4 id="target-logarynimrod-builtin">Target: Logary.Nimrod <em>builtin</em></h4>
-<p><strong>For LogLines and Measures</strong></p>
+<h2 id="nimrod">Nimrod</h2>
+<p><strong>For LogLines and Measures | builtin</strong></p>
 <p>Nimrod is a metrics server based on log processing - as such it can handle both
 LogLines and Measures.</p>
 <blockquote>
@@ -360,14 +394,14 @@ affect the way you write your applications, nor has it any side effect on them.<
 </code></pre>
 
 <p><img alt="Nimrod" src="https://raw.githubusercontent.com/logary/logary-assets/master/targets/nimrod.png" /></p>
-<h4 id="target-logarydash">Target: Logary.Dash</h4>
+<h2 id="dash">Dash</h2>
 <p>Work in progress - aims to provide the same dashboard as Metrics.Net, allowing
 you runtime insight into your programs.</p>
 <pre class="prettyprint well"><code class="powershell">Install-Package Intelliplan.Logary.Dash -Pre
 </code></pre>
 
 <p>The dashboard uses the awesome F# web server <a href="http://suave.io/">suave.io</a>.</p>
-<h4 id="target-logaryzipkin">Target: Logary.Zipkin</h4>
+<h2 id="zipkin">Zipkin</h2>
 <p><strong>For LogLines - and adds Spans</strong></p>
 <p>Currently work in progress: LogLines and Measures become annotations to Spans
 which are correlated in process and then sent through Thrift to the Zipkin
