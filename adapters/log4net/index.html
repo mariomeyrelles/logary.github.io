@@ -6,10 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Henrik Feldt">
-        <link rel="canonical" href="https://logary.github.io/targets/zipkin/">
+        <link rel="canonical" href="https://logary.github.io/adapters/log4net/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-        <title>Zipkin - Logary</title>
+        <title>log4net - Logary</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -66,64 +66,64 @@
             
             
             
-                <li class="dropdown active">
+                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Targets <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
                         <li >
-                            <a href="../overview/">Overview</a>
+                            <a href="../../targets/overview/">Overview</a>
                         </li>
                     
                         <li >
-                            <a href="../textwriter/">TextWriter</a>
+                            <a href="../../targets/textwriter/">TextWriter</a>
                         </li>
                     
                         <li >
-                            <a href="../console/">Console</a>
+                            <a href="../../targets/console/">Console</a>
                         </li>
                     
                         <li >
-                            <a href="../file/">Console</a>
+                            <a href="../../targets/file/">Console</a>
                         </li>
                     
                         <li >
-                            <a href="../logstash/">Logstash</a>
+                            <a href="../../targets/logstash/">Logstash</a>
                         </li>
                     
                         <li >
-                            <a href="../graphite/">Graphite</a>
+                            <a href="../../targets/graphite/">Graphite</a>
                         </li>
                     
                         <li >
-                            <a href="../elmahio/">ElmahIO</a>
+                            <a href="../../targets/elmahio/">ElmahIO</a>
                         </li>
                     
                         <li >
-                            <a href="../logentries/">Logentries</a>
+                            <a href="../../targets/logentries/">Logentries</a>
                         </li>
                     
                         <li >
-                            <a href="../loggr/">Loggr</a>
+                            <a href="../../targets/loggr/">Loggr</a>
                         </li>
                     
                         <li >
-                            <a href="../riemann/">Riemann</a>
+                            <a href="../../targets/riemann/">Riemann</a>
                         </li>
                     
                         <li >
-                            <a href="../db/">DB</a>
+                            <a href="../../targets/db/">DB</a>
                         </li>
                     
                         <li >
-                            <a href="../nimrod/">Nimrod</a>
+                            <a href="../../targets/nimrod/">Nimrod</a>
                         </li>
                     
                         <li >
-                            <a href="../dash/">Dash</a>
+                            <a href="../../targets/dash/">Dash</a>
                         </li>
                     
-                        <li class="active">
-                            <a href="./">Zipkin</a>
+                        <li >
+                            <a href="../../targets/zipkin/">Zipkin</a>
                         </li>
                     
                     </ul>
@@ -131,24 +131,24 @@
             
             
             
-                <li class="dropdown">
+                <li class="dropdown active">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Adapters <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
                         <li >
-                            <a href="../../adapters/overview/">Overview</a>
+                            <a href="../overview/">Overview</a>
                         </li>
                     
                         <li >
-                            <a href="../../adapters/suave/">Suave</a>
+                            <a href="../suave/">Suave</a>
                         </li>
                     
                         <li >
-                            <a href="../../adapters/topshelf/">Topshelf</a>
+                            <a href="../topshelf/">Topshelf</a>
                         </li>
                     
-                        <li >
-                            <a href="../../adapters/log4net/">log4net</a>
+                        <li class="active">
+                            <a href="./">log4net</a>
                         </li>
                     
                     </ul>
@@ -204,12 +204,12 @@
             <ul class="nav navbar-nav navbar-right">
                 
                 <li >
-                    <a rel="next" href="../dash/">
+                    <a rel="next" href="../topshelf/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../../adapters/overview/">
+                    <a rel="prev" href="../../advanced/overview/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -232,69 +232,35 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#facinus-desierant">Facinus desierant</a></li>
-        
-            <li><a href="#virgine-non-geratis-moenia-avidosque-tibi">Virgine non geratis moenia avidosque tibi</a></li>
-        
-            <li><a href="#iacebant-aut-pedibus-sumere-ad-adapertaque-holus">Iacebant aut pedibus sumere ad adapertaque holus</a></li>
-        
-            <li><a href="#merito-iubebat">Merito iubebat</a></li>
-        
-            <li><a href="#quem-tu-marcentia-reges-aetherias">Quem tu marcentia reges aetherias</a></li>
+        <li class="main active"><a href="#log4net-adapter">log4net Adapter</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="facinus-desierant">Facinus desierant</h1>
-<h2 id="virgine-non-geratis-moenia-avidosque-tibi">Virgine non geratis moenia avidosque tibi</h2>
-<p>Lorem markdownum, meritis cannis. Pressa iuro, regna undas vota putat te tuis
-nos, auras.</p>
-<ul>
-<li>Fortuna attonitusque factum quae argumenta</li>
-<li>Summas dum</li>
-<li>Illas vaporibus adducto feri</li>
-<li>Illa manus distamus altaque paulatimque probes cum</li>
-<li>Tuo dum de hospes per</li>
-<li>Iter retinens et subdita sit quam nata</li>
-</ul>
-<h2 id="iacebant-aut-pedibus-sumere-ad-adapertaque-holus">Iacebant aut pedibus sumere ad adapertaque holus</h2>
-<p>Vigilat necis retia, Idalien, meta quodcumque posse, pulcherrima scelus
-totidemque rettulit, pater senes vires? Tamen ego resistere, tacitos Nyctimenen
-possim Europam. Lux cycno ita petendo, exierat pendentes <em>et</em> illa redit: orbem.
-Exul procul Mars priori certe, oras colit tuo; inclusum natorum.</p>
-<pre class="prettyprint well"><code>nosql.raw.ping_dns_pptp(wep, bugPrinter * 2);
-if (logFile == page + telecommunications_software(5)) {
-    compression_ssl_zone(5 * 1);
-    boot_utf(website, ipodCaseManagement);
-    lanComponentGraphics += fi.metadata_system(iconGraphicsKvm);
-}
-if (-1) {
-    gis_unicode_carrier.memory_it += troll(ribbonChip(
-            certificateCableHandle, guiSmartRgb, parseLpi), -5,
-            startBitWindows(card, engine));
-    uri_swipe += proxy;
-}
-bankruptcyPromSmm(mode_pop_tutorial - -3 + qbe + pasteCopy, ppi(
-        component_bare, cameraFileCard(cifsService,
-        framework_impact_quicktime)));
+<h1 id="log4net-adapter">log4net Adapter</h1>
+<p>This adapter is a log4net Appender. It exists, because you might already have
+libs and software that uses log4net to get things done, and you don't have time
+to completely replace the logging infrastructure throughout your company.</p>
+<p>Well, you're in luck! Now there's a log4net appender that you can use to get
+access to all the niceties of Logary.</p>
+<pre class="prettyprint well"><code class="powershell">Install-Package Intelliplan.Logary.log4net -Pre
 </code></pre>
-<h2 id="merito-iubebat">Merito iubebat</h2>
-<p>Repagula clipei cognoscere ruinas equarum. Oculos longe sterilique: iuvat vidi
-salutant, quae ante barbae viscera. Revulsum nisi; vallibus nudum, moribundo
-Lyciaeque vina Acarnanum. Calamo animoque, pondere, insania, vim temperie natos;
-seu Minyeias Iphis alto ferebat precatur.</p>
-<h2 id="quem-tu-marcentia-reges-aetherias">Quem tu marcentia reges aetherias</h2>
-<p>Et constitit et parens te nubes clamat, palustribus tertius iustae, crines, dis
-innumeraeque nigris vittisconcutiens imagine quotiensque. Et et ergo? Hunc
-dedecus, spumantiaque urbis fatiiuvenescere removi et tergo potuisse; sum somni
-ferat <a href="http://example.com/">pars</a>, ore <em>inter</em>.</p>
-<p>Resoluta agit Sirenum, est suae <strong>quibus</strong> coniunx positaeque Aurora stillabant
-tantus foret. Arcus virorum fortibus medentes <strong>uno ripae figuras</strong> amnes.</p>
-<p>Vimque videri imbre miraturus digitis induit certamine Ausonio, erit natis erat
-senex. Iuppiter <em>mei</em>, postulat de subito pateret inque lucifer cunctis vota
-utero columnae.</p>
+
+<p>Now, add the adapter to your log4net configuration -- I recommend having the
+message as the only message, instead of polluting the message with all sorts of
+data-items that automatically get passed to the 'data' property of the LogLine,
+anyhow.</p>
+<p>Hence:</p>
+<pre class="prettyprint well"><code class="xml">&lt;appender name=&quot;LogaryAppender&quot; type=&quot;log4net.Appender.LogaryAppender&quot;&gt;
+    &lt;layout type=&quot;log4net.Layout.PatternLayout&quot;&gt;
+        &lt;conversionPattern value=&quot;%message&quot; /&gt;
+    &lt;/layout&gt;
+&lt;/appender&gt;
+</code></pre>
+
+<p>Happy logging!</p>
 </div>
         </div>
 
