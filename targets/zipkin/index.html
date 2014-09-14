@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Henrik Feldt">
+        <link rel="canonical" href="https://logary.github.io/targets/zipkin/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+        <title>Zipkin - Logary</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../../css/prettify-1.0.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        
+            <link href="../../css/fixes.css" rel="stylesheet" />
+        
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+        
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">Logary</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../../api/">API</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Targets <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../overview/">Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../textwriter/">TextWriter</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../console/">Console</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../file/">Console</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../logstash/">Logstash</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../graphite/">Graphite</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../elmahio/">ElmahIO</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../logentries/">Logentries</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../loggr/">Loggr</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../riemann/">Riemann</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../db/">DB</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../nimrod/">Nimrod</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../dash/">Dash</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="./">Zipkin</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Adapters <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../adapters/overview/">Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../adapters/suave/">Suave</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../adapters/topshelf/">Topshelf</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../../about/">About</a>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li >
+                    <a rel="next" href="../dash/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../../adapters/overview/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/logary/logary/">
+                        
+                            <i class="fa fa-github"></i>
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#facinus-desierant">Facinus desierant</a></li>
+        
+            <li><a href="#virgine-non-geratis-moenia-avidosque-tibi">Virgine non geratis moenia avidosque tibi</a></li>
+        
+            <li><a href="#iacebant-aut-pedibus-sumere-ad-adapertaque-holus">Iacebant aut pedibus sumere ad adapertaque holus</a></li>
+        
+            <li><a href="#merito-iubebat">Merito iubebat</a></li>
+        
+            <li><a href="#quem-tu-marcentia-reges-aetherias">Quem tu marcentia reges aetherias</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="facinus-desierant">Facinus desierant</h1>
+<h2 id="virgine-non-geratis-moenia-avidosque-tibi">Virgine non geratis moenia avidosque tibi</h2>
+<p>Lorem markdownum, meritis cannis. Pressa iuro, regna undas vota putat te tuis
+nos, auras.</p>
+<ul>
+<li>Fortuna attonitusque factum quae argumenta</li>
+<li>Summas dum</li>
+<li>Illas vaporibus adducto feri</li>
+<li>Illa manus distamus altaque paulatimque probes cum</li>
+<li>Tuo dum de hospes per</li>
+<li>Iter retinens et subdita sit quam nata</li>
+</ul>
+<h2 id="iacebant-aut-pedibus-sumere-ad-adapertaque-holus">Iacebant aut pedibus sumere ad adapertaque holus</h2>
+<p>Vigilat necis retia, Idalien, meta quodcumque posse, pulcherrima scelus
+totidemque rettulit, pater senes vires? Tamen ego resistere, tacitos Nyctimenen
+possim Europam. Lux cycno ita petendo, exierat pendentes <em>et</em> illa redit: orbem.
+Exul procul Mars priori certe, oras colit tuo; inclusum natorum.</p>
+<pre class="prettyprint well"><code>nosql.raw.ping_dns_pptp(wep, bugPrinter * 2);
+if (logFile == page + telecommunications_software(5)) {
+    compression_ssl_zone(5 * 1);
+    boot_utf(website, ipodCaseManagement);
+    lanComponentGraphics += fi.metadata_system(iconGraphicsKvm);
+}
+if (-1) {
+    gis_unicode_carrier.memory_it += troll(ribbonChip(
+            certificateCableHandle, guiSmartRgb, parseLpi), -5,
+            startBitWindows(card, engine));
+    uri_swipe += proxy;
+}
+bankruptcyPromSmm(mode_pop_tutorial - -3 + qbe + pasteCopy, ppi(
+        component_bare, cameraFileCard(cifsService,
+        framework_impact_quicktime)));
+</code></pre>
+<h2 id="merito-iubebat">Merito iubebat</h2>
+<p>Repagula clipei cognoscere ruinas equarum. Oculos longe sterilique: iuvat vidi
+salutant, quae ante barbae viscera. Revulsum nisi; vallibus nudum, moribundo
+Lyciaeque vina Acarnanum. Calamo animoque, pondere, insania, vim temperie natos;
+seu Minyeias Iphis alto ferebat precatur.</p>
+<h2 id="quem-tu-marcentia-reges-aetherias">Quem tu marcentia reges aetherias</h2>
+<p>Et constitit et parens te nubes clamat, palustribus tertius iustae, crines, dis
+innumeraeque nigris vittisconcutiens imagine quotiensque. Et et ergo? Hunc
+dedecus, spumantiaque urbis fatiiuvenescere removi et tergo potuisse; sum somni
+ferat <a href="http://example.com/">pars</a>, ore <em>inter</em>.</p>
+<p>Resoluta agit Sirenum, est suae <strong>quibus</strong> coniunx positaeque Aurora stillabant
+tantus foret. Arcus virorum fortibus medentes <strong>uno ripae figuras</strong> amnes.</p>
+<p>Vimque videri imbre miraturus digitis induit certamine Ausonio, erit natis erat
+senex. Iuppiter <em>mei</em>, postulat de subito pateret inque lucifer cunctis vota
+utero columnae.</p>
+</div>
+        </div>
+
+        
+
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/prettify-1.0.min.js"></script>
+        <script src="../../js/base.js"></script>
+    </body>
+</html>

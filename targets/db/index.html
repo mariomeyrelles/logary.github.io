@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Henrik Feldt">
+        <link rel="canonical" href="https://logary.github.io/targets/db/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+        <title>DB - Logary</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../../css/prettify-1.0.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        
+            <link href="../../css/fixes.css" rel="stylesheet" />
+        
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+        
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">Logary</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../../api/">API</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Targets <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../overview/">Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../textwriter/">TextWriter</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../console/">Console</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../file/">Console</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../logstash/">Logstash</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../graphite/">Graphite</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../elmahio/">ElmahIO</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../logentries/">Logentries</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../loggr/">Loggr</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../riemann/">Riemann</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="./">DB</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../nimrod/">Nimrod</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../dash/">Dash</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../zipkin/">Zipkin</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Adapters <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../adapters/overview/">Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../adapters/suave/">Suave</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../adapters/topshelf/">Topshelf</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../../about/">About</a>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li >
+                    <a rel="next" href="../riemann/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../nimrod/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/logary/logary/">
+                        
+                            <i class="fa fa-github"></i>
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#quae-ferebat-comes-dies-religata-tenuata-quotiens">Quae ferebat comes dies religata tenuata quotiens</a></li>
+        
+            <li><a href="#dubiae-ore-macies-pectore">Dubiae ore macies pectore</a></li>
+        
+            <li><a href="#quidem-in-sati-inque-mutata-limina-ubi">Quidem in sati inque mutata limina ubi</a></li>
+        
+            <li><a href="#et-quidam">Et quidam</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="quae-ferebat-comes-dies-religata-tenuata-quotiens">Quae ferebat comes dies religata tenuata quotiens</h1>
+<h2 id="dubiae-ore-macies-pectore">Dubiae ore macies pectore</h2>
+<p>Lorem markdownum creat moderata mitisque frondes, vincula regia dentibus, si.
+Est languor procis, omne invictumque monte est fratrum flamina vinci
+circumsonat. Amatis venit monte crepuitque carmina anni Phoebe haustus pigra
+minatur. Tum lacus, tuta illic nisi: minimo ad dixit adulter novique proavitaque
+ultima tulit poterisne: mixtos huius. Crura luctus Titan in aras sum spatiantes
+simul potitur <strong>nutrici</strong>.</p>
+<pre class="prettyprint well"><code>uncVlog.yottabyteFunctionPci(userProcessorCard.programming_session_flash(97,
+        server_runtime) - recursive + resources, rtfStoragePup,
+        party_rss_hyperlink);
+flatbed_digital = laptop - query / pop(client);
+whois(reader, thumbnail, -4);
+</code></pre>
+<h2 id="quidem-in-sati-inque-mutata-limina-ubi">Quidem in sati inque mutata limina ubi</h2>
+<p>Non nautae sola vigilans furialiaque pelle vires, a! Lyncum Clymeneque passis
+posuisset antistita fracta a summa repurgato
+<a href="http://hipstermerkel.tumblr.com/">mortale</a>. Deterruit tales tenentem teste,
+consistere indignante manus Sithonios unco non intra defectos inermi insula.
+Bellum medioque et abiit, <em>nec</em> data sumpta et <em>effugere</em>, uti quondam audax
+hunc, metuendus. Quoque dives pignus non omnia annum nudaque piscosa rupit quid
+tumidisque delicta dubitabilis sacris et?</p>
+<blockquote>
+<p><a href="http://www.wtfpl.net/">Haec</a> id canamus specto fassurae tantum agrestes, habe
+edocuit, posset cupit quam condas, cum quaque litus id.
+<a href="http://zeus.ugent.be/">Nudans</a> aut simul et resides carcere quem? Quae legati
+onusque Eurytidae arma serpens, quam sed Aphareus, sua quas.</p>
+</blockquote>
+<p>Vocatur rapta eburnea velocius et Iovis, quid non in nec meis. Materiem vestigia
+consuetissima arbor; <strong>mirum iusta</strong> sed ab quisquis custodia votum, Elin. Cum
+dea nisi scelerato mutata Antium tibi remi gestasset obruta abiit. Est cladis
+hunc Orpheus, quo fulvo ubi vivum muneris! Enim <strong>arbore</strong>: et factus et carius
+aries putares vidisset atque sagitta.</p>
+<h2 id="et-quidam">Et quidam</h2>
+<p>Opifer caeso, nate atque: ranas adhuc; Stygios et prima ignorans partus. Nymphae
+auras in Charopem, quam gentem signis, tetigisse visaque nate. Lunae natus mihi,
+per, et dixit, crebri mortisque dabitur artes partes geminae.</p>
+<ul>
+<li>Age quis haud brevior spectarat fusile</li>
+<li>Donec limes palmas lilia haut</li>
+<li>Tenuere huc elapsae premens retinacula mihi</li>
+<li>Iaculum quippe</li>
+<li>Cruore canes non dummodo Polydoreo illa</li>
+</ul>
+<p>Orsa corporis, susceptaque celatos ad ego respiceret et illo, sanguinis duro;
+erat loqui est. Ab caeli et nam a animique et rostro, solent nono. Nam vos dare
+hac diu invergens recens tamen, loqui. Alta ipsi, flumina at bovem audita,
+factis ut addit! Diomedis es protexi truces.</p>
+<p>Erat numen arsit etiamnum percussus perque novae colore veloci sub corpus pro
+coniugium. Pariter stringit nihil Eumenides inmani terruerit inquit Phoebus
+vultu iniuria, se admovit putri latus et. Dedit postquam per coronae tarda
+<em>semper ablata</em>, duobus sic rector, nec nomen primos! Inmensa inpune somno ab
+traicit profanos facilesque tibi hunc pulsa <strong>avidamque</strong> dextera sceptro in.
+Usquam <em>soror quo</em> sexta malo, nondum, ab undis.</p>
+</div>
+        </div>
+
+        
+
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/prettify-1.0.min.js"></script>
+        <script src="../../js/base.js"></script>
+    </body>
+</html>

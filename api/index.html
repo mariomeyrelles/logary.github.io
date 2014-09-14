@@ -6,10 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Henrik Feldt">
-        <link rel="canonical" href="https://logary.github.io/about/">
+        <link rel="canonical" href="https://logary.github.io/api/">
         <link rel="shortcut icon" href="../img/favicon.ico">
 
-        <title>About - Logary</title>
+        <title>API - Logary</title>
 
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -60,8 +60,8 @@
             
             
             
-                <li >
-                    <a href="../api/">API</a>
+                <li class="active">
+                    <a href="./">API</a>
                 </li>
             
             
@@ -152,8 +152,8 @@
             
             
             
-                <li class="active">
-                    <a href="./">About</a>
+                <li >
+                    <a href="../about/">About</a>
                 </li>
             
             
@@ -163,12 +163,12 @@
             <ul class="nav navbar-nav navbar-right">
                 
                 <li >
-                    <a rel="next" href="../adapters/topshelf/">
+                    <a rel="next" href="..">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
-                <li class="disabled">
-                    <a rel="prev" >
+                <li >
+                    <a rel="prev" href="../targets/overview/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -191,72 +191,151 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#ipsa-nulla-quodque-mollesque-norat-vide-apertum">Ipsa nulla quodque mollesque norat vide apertum</a></li>
+        <li class="main active"><a href="#api">API</a></li>
         
-            <li><a href="#ora-caerula">Ora caerula</a></li>
+            <li><a href="#api-cvb-facade">API: C#/VB façade</a></li>
         
-            <li><a href="#per-me-nulla-ut-clarae-delius-auctus">Per me nulla ut clarae Delius auctus</a></li>
-        
-            <li><a href="#nempe-suae-canum">Nempe suae canum</a></li>
-        
-            <li><a href="#avidum-a-et-haut">Avidum a et haut</a></li>
-        
-            <li><a href="#telo-telum-erat-ara-di-perspicit-malignas">Telo telum erat ara di perspicit malignas</a></li>
+            <li><a href="#healthchecks-metrics-probes">HealthChecks, Metrics, Probes</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="ipsa-nulla-quodque-mollesque-norat-vide-apertum">Ipsa nulla quodque mollesque norat vide apertum</h1>
-<h2 id="ora-caerula">Ora caerula</h2>
-<p>Lorem markdownum at utque, ait membris mersit tibi res. <a href="http://zeus.ugent.be/">Bos si
-cervus</a> ficti, est et inducta at herbae vertit dracones
-celsa seges namque! In vocari ambiguus atque <em>numinis pignora addit</em>. <strong>Corpus
-faciat</strong>, quos revertentes oculis pennis aequora: mihi Sirinosque simul ad
-vestram quoque erat, vidit puto quoque.</p>
-<ol>
-<li>Signa difficilis bimembres somnis</li>
-<li>Vulnera mare Pirithoi vixque infectis subitis tamen</li>
-<li>Non addit festaque solutum contentus tu nec</li>
-<li>Vates indiciumque in quoque fecit</li>
-<li>Dicere sententia Alpheos inque</li>
-</ol>
-<h2 id="per-me-nulla-ut-clarae-delius-auctus">Per me nulla ut clarae Delius auctus</h2>
-<p>Tellure mihi parum patitur fuit nec breve solitumque <a href="http://gifctrl.com/">laeva
-invenio</a> quam. Incumbit gladio oraque, tenebant! Et
-metallis nuper nec protinus quoque, est et scelus nam.</p>
-<h2 id="nempe-suae-canum">Nempe suae canum</h2>
-<p>Hominum venimus Hactenus, meritos ipse creatos et aberat novo, tu clipeum Argum,
-<a href="http://heeeeeeeey.com/">urbesque</a>. Diva nubes indicat primoque vidit, nec sua,
-siqua in cruor angustum Aeaeae studioque qua?</p>
-<ol>
-<li>Mea coniecta odoro</li>
-<li>Mollire Isthmon protervis corrigit verum</li>
-<li>Matris relinque hinc</li>
-<li>Destruitis sancta mora</li>
-</ol>
-<h2 id="avidum-a-et-haut">Avidum a et haut</h2>
-<p>Deos omnis thalamos, Euboicam magnoque atras. Aut illis removente minus esse
-vocavit <strong>veri</strong>. Ima omnibus dixit, maturus crevit studio, removebitur ducunt
-loricaeque generosa. <a href="http://gifctrl.com/">Ad nostrasque</a> rictus tristia errabat
-terra: apulus primus! Animosque olim, sic esse cava terras, citharae Thaumantias
-victor.</p>
-<h2 id="telo-telum-erat-ara-di-perspicit-malignas">Telo telum erat ara di perspicit malignas</h2>
-<p>Aere illo aera, valuere subeant proceres Iphis corpus animo frustra longis:
-ducit. Auro sit, sit, ulla, bibit lactis, est sine poscitur, ex devovitque tum
-nisi crescunt bracchia. <strong>Fugacis altera deorum</strong> retentas regna utriusque
-quisquis temeraria <strong>iamque</strong>. Ubi hunc? Troius Cephenum ramum: quae sed
-capillos vixque: illam, anseribus aquosae.</p>
-<ul>
-<li>Hinc nata suis</li>
-<li>Posse exegit parvumque inmune Ausonia totidem tenebras</li>
-<li>Adnuit vult fugias si Polydoreo multos animis</li>
-<li>Terrae corpore scopulos permansit manus hauserit erant</li>
-</ul>
-<p>Fixus mirabantur usque Minervae lingua Nyctimenen
-<a href="http://kimjongunlookingatthings.tumblr.com/">tot</a> mortemque ad acutae, et timet
-anhelitus muneris quod? Aut crimen caedis fluidoque venabula et inpedit!</p>
+<h1 id="api">API</h1>
+<p>This package works great with F#:</p>
+<pre class="prettyprint well"><code class="fsharp">open System
+
+open NodaTime
+
+open Logary
+open Logary.Configuration
+open Logary.Targets
+open Logary.Metrics
+
+[&lt;EntryPoint&gt;]
+let main argv =
+  use logary =
+    withLogary' &quot;Riemann.Example&quot; (
+      withTargets [
+        Riemann.create (Riemann.RiemannConf.Create(tags = [&quot;riemann-health&quot;])) &quot;riemann&quot;
+        Console.create (Console.ConsoleConf.Default) &quot;console&quot;
+      ] &gt;&gt;
+      withMetrics (Duration.FromMilliseconds 5000L) [
+        WinPerfCounters.create (WinPerfCounters.Common.cpuTime) &quot;cpuTime&quot; (Duration.FromMilliseconds 500L)
+      ] &gt;&gt;
+      withRules [
+        Rule.forAny &quot;riemann&quot;
+        Rule.forAny &quot;console&quot;
+      ] &gt;&gt;
+      withInternalTargets Info [
+        Console.create (Console.ConsoleConf.Default) &quot;console&quot;
+      ]
+    )
+
+  Console.ReadKey true |&gt; ignore
+  0
+</code></pre>
+
+<h2 id="api-cvb-facade">API: C#/VB façade</h2>
+<p>This facade is useful when you're using C# </p>
+<pre class="prettyprint well"><code class="powershell">Install-Package Intelliplan.Logary.CSharp -Pre
+</code></pre>
+
+<p>It adds extension methods to the <code>Logary</code> namespace. Just import the namespace
+to get access to the extension methods, while having the nuget/dll referenced.</p>
+<pre class="prettyprint well"><code class="csharp">using System;
+using System.Data.SQLite;
+using System.Text.RegularExpressions;
+using FluentMigrator.Runner.Announcers;
+using FluentMigrator.Runner.Generators.SQLite;
+using FluentMigrator.Runner.Processors.Sqlite;
+using Logary;
+using Logary.Configuration;
+using Logary.DB.Migrations;
+using Logary.Target;
+using Console = System.Console;
+
+namespace Intelliplan.Logary.Specs.Examples
+{
+    public class When_using_fluent_API
+    {
+        public void UsageExample()
+        {
+            var x = LogaryFactory.New(&quot;Logary Specs&quot;,
+                with =&gt; with.Target&lt;TextWriter.Builder&gt;(
+                    &quot;console1&quot;,
+                    conf =&gt;
+                    conf.Target.WriteTo(Console.Out, Console.Error)
+                        .MinLevel(LogLevel.Verbose)
+                        .AcceptIf(line =&gt; true)
+                        .SourceMatching(new Regex(&quot;.*&quot;))
+                    )
+                    .Target&lt;Graphite.Builder&gt;(
+                        &quot;graphite&quot;,
+                        conf =&gt; conf.Target.ConnectTo(&quot;127.0.0.1&quot;, 2131)
+                    )
+                    .Target&lt;Debugger.Builder&gt;(&quot;debugger&quot;)
+                    .Target&lt;Logstash.Builder&gt;(
+                        &quot;ls&quot;,
+                        conf =&gt; conf.Target
+                            .Hostname(&quot;localhost&quot;)
+                            .Port(1936)
+                            .EventVersion(Logstash.EventVersion.One)
+                            .Done())
+                    .Target&lt;DB.Builder&gt;(&quot;db&quot;,
+                        conf =&gt; conf.Target
+                            .ConnectionFactory(() =&gt; new SQLiteConnection())
+                            .DefaultSchema()
+                            .MigrateUp(
+                                conn =&gt; new SqliteProcessor(conn,
+                                    new SqliteGenerator(),
+                                    new ConsoleAnnouncer(),
+                                    new MigrationOptions(false, &quot;&quot;, 60),
+                                    new SqliteDbFactory())))
+                );
+
+            var logger = x.GetLogger(&quot;Sample.Config&quot;);
+
+            logger.Log(&quot;Hello world&quot;, LogLevel.Debug, new
+                {
+                    important = &quot;yes&quot;
+                });
+
+            logger.Log(LogLevel.Fatal, &quot;Fatal application error on finaliser thread&quot;);
+
+            logger.Verbose(&quot;immegawd immegawd immegawd!!&quot;, &quot;tag1&quot;, &quot;tag2&quot;);
+
+            var val = logger.TimePath(&quot;sample.config.compute_answer_to_everything&quot;, () =&gt;
+                {
+                    for (int i = 0; i &lt; 100; i++)
+                        System.Threading.Thread.Sleep(1);
+
+                    return 32;
+                });
+
+            logger.LogFormat(LogLevel.Warn, &quot;{0} is the answer to the universe and everything&quot;, val);
+
+            logger.Time(() =&gt; logger.Debug(&quot;I wonder how long this takes&quot;, &quot;introspection&quot;, &quot;navel-gazing&quot;));
+
+            try
+            {
+                throw new ApplicationException(&quot;thing went haywire&quot;);
+            }
+            catch (Exception e)
+            {
+                logger.DebugException(&quot;expecting haywire, so we're telling with debug&quot;, e, &quot;haywire&quot;, &quot;external&quot;);
+            }
+        }
+    }
+}
+</code></pre>
+
+<h2 id="healthchecks-metrics-probes">HealthChecks, Metrics, Probes</h2>
+<p>Health Checks are like probes, but know how to interpret the results into the
+warning-levels of <code>LogLevel</code>.</p>
+<p>Metrics: This is currently fairly well-working - have a look at the SQLHealthService for
+an example of a Probe.</p>
 </div>
         </div>
 
