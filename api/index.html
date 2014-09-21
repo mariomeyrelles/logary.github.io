@@ -266,8 +266,8 @@ let main argv =
         WinPerfCounters.create (WinPerfCounters.Common.cpuTime) &quot;cpuTime&quot; (Duration.FromMilliseconds 500L)
       ] &gt;&gt;
       withRules [
-        Rule.forAny &quot;riemann&quot;
-        Rule.forAny &quot;console&quot;
+        Rule.createForTarget &quot;riemann&quot;
+        Rule.createForTarget &quot;console&quot;
       ] &gt;&gt;
       withInternalTargets Info [
         Console.create (Console.ConsoleConf.Default) &quot;console&quot;
