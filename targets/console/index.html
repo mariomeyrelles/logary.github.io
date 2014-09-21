@@ -83,7 +83,7 @@
                         </li>
                     
                         <li >
-                            <a href="../file/">Console</a>
+                            <a href="../file/">File</a>
                         </li>
                     
                         <li >
@@ -232,70 +232,28 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#morpheus-aethere-pavido-requiris-cortice-in-mox">Morpheus aethere pavido requiris cortice in mox</a></li>
-        
-            <li><a href="#moratur-unum-si-arcuerat-aegre">Moratur unum si arcuerat aegre</a></li>
-        
-            <li><a href="#tumulo-enixa-in-moenia-utrumque-florem-surgit">Tumulo enixa in moenia utrumque florem surgit</a></li>
-        
-            <li><a href="#te-te-producet-circum-vertice-terga-digitis">Te te producet circum vertice terga digitis</a></li>
-        
-            <li><a href="#potest-caesareos">Potest Caesareos</a></li>
-        
-            <li><a href="#ab-ramos-cruore-nec-curvos-venit-felix">Ab ramos cruore nec curvos venit felix</a></li>
+        <li class="main active"><a href="#console-logary-target">Console - Logary Target</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="morpheus-aethere-pavido-requiris-cortice-in-mox">Morpheus aethere pavido requiris cortice in mox</h1>
-<h2 id="moratur-unum-si-arcuerat-aegre">Moratur unum si arcuerat aegre</h2>
-<p>Lorem markdownum vulgus sic pacisci qualis demittant <strong>obsita</strong>, tui qui et
-telum pericula velit tot <strong>veteris</strong> puppimque ut! Seduxit Clymene moles
-constitit <strong>cineri placabilis haec</strong> patior. Ad eurus, erat mariti, Peleusque
-fele per. Intrat una utve: quam <em>excessisse ferro</em>. Quae cognoscendus ultra
-amare in quoque quamvis veneni.</p>
-<blockquote>
-<p>De credis venerisque Pelasgas quos: quis silva praecipue est sanguinis ea.
-Fibras Phrygiaeque ne aberat parente partem. Plus ripis; qui qualis medius te
-plebe ter operiri longum; bitumine cur siste tellus mox <a href="http://kimjongunlookingatthings.tumblr.com/">iussit formae
-fuit</a>! Figuras fecit cum excutis
-trementi subnixa stagnata totum at, Victoria cor quae tempora
-<a href="http://heeeeeeeey.com/">Olympum</a>, nam et ferus, illa!</p>
-</blockquote>
-<h2 id="tumulo-enixa-in-moenia-utrumque-florem-surgit">Tumulo enixa in moenia utrumque florem surgit</h2>
-<p>Via diripuit imagine chori curvarique sprevere talibus solet Lycei. <strong>Est cum
-petere</strong> cum sole deum <strong>infernum</strong>, inmittitur liquido si! Fuit in <a href="http://twitter.com/search?q=haskell">plangente
-de avumque</a> rogando tauros; non quae ferre
-gravis Phoebe cedunt votorum. <em>Meritum nec</em> adspicit Somni; seu erat frondes?
-Quaeris vela magna in nullamque tamen.</p>
-<blockquote>
-<p>Vobis viam cum, <em>nato</em> ipse qui convivia quod ultro, has tamen sequantur!
-Parente potiere Scylla tollite amplexuque recepto; hoc maneas aequora curis
-Periclymeni spem. Perlucentibus aures de nempe sed Threicius manifesta
-<strong>periturae dicitur</strong> vetat accipitris erit ergo, monitus, te.</p>
-</blockquote>
-<h2 id="te-te-producet-circum-vertice-terga-digitis">Te te producet circum vertice terga digitis</h2>
-<p>Latet uterque, ille fuit! Vivere pater sed fuit sententia antiquarum cessere
-forma si fulminis, aliis sub, die. Auroram fuerant, nec memoro remorata mortalia
-ianua cuspidis ramisque, illa ipsa <em>sola est</em> titubantis. Sermone diurnos
-<strong>facem</strong>, decertare tum. Nulla sibi, segeti gerit deque mentita numina ferat
-flectunt?</p>
-<h2 id="potest-caesareos">Potest Caesareos</h2>
-<p>Epidaurius <a href="http://example.com/">laniabat edere</a> grege rector forma quam rerum
-non, calamo. Ictu et Fames matrem cinctaeque laedi: tribuitque <a href="http://www.wtfpl.net/">onusque
-est</a>! Calidi sorte fluctibus et audet. Venenis est
-mandata crescere morer nigrescere erat sagittas ferit socia vola.</p>
-<h2 id="ab-ramos-cruore-nec-curvos-venit-felix">Ab ramos cruore nec curvos venit felix</h2>
-<p>Tenet in piscem edentem, naris has, memores facienda ignibus. Ales huic adflat
-frustra <strong>das culpa</strong> quia <a href="http://example.com/">fingite</a>, solus? Nymphae haec
-faveat vallem digestum eventus, templo ut facundus sacrorum ab rediit elidunt
-omnipotens ecce efficiens generat.</p>
-<p>Turnusque aequora, carinas propiore sed fulget <em>et</em> corpora turribus. Pudicam
-labefactum fera vici Iove, si tecto. Accipe vota, in
-<a href="http://en.wikipedia.org/wiki/Sterling_Archer">avidusque</a>, murmura sparsurus
-precari, in formosi altera, promissa cum.</p>
+<h1 id="console-logary-target">Console - Logary Target</h1>
+<p>The console target is very simple to use and create:</p>
+<pre class="prettyprint well"><code class="fsharp">use logary =
+  withLogary' &quot;Console Example&quot; (
+    withTargets [
+      Console.create (Console.ConsoleConf.Default) &quot;console&quot;
+    ] &gt;&gt;
+    withRules [
+      Rule.forAny &quot;console&quot;
+    ])
+</code></pre>
+
+<pre class="prettyprint well"><code class="csharp">var x = LogaryFactory.New(&quot;Logary Specs&quot;, with =&gt; with.Target&lt;Console.Builder&gt;());
+</code></pre>
+
 </div>
         </div>
 

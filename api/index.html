@@ -83,7 +83,7 @@
                         </li>
                     
                         <li >
-                            <a href="../targets/file/">Console</a>
+                            <a href="../targets/file/">File</a>
                         </li>
                     
                         <li >
@@ -260,7 +260,7 @@ let main argv =
     withLogary' &quot;Riemann.Example&quot; (
       withTargets [
         Riemann.create (Riemann.RiemannConf.Create(tags = [&quot;riemann-health&quot;])) &quot;riemann&quot;
-        Console.create (Console.ConsoleConf.Default) &quot;console&quot;
+        Console.create Console.empty &quot;console&quot;
       ] &gt;&gt;
       withMetrics (Duration.FromMilliseconds 5000L) [
         WinPerfCounters.create (WinPerfCounters.Common.cpuTime) &quot;cpuTime&quot; (Duration.FromMilliseconds 500L)
@@ -278,6 +278,30 @@ let main argv =
   0
 </code></pre>
 
+<p>Now you can get a logger through the <code>Logging</code> module:</p>
+<p><strong>F#</strong></p>
+<pre class="prettyprint well"><code class="fsharp">let logger = Logging.getCurrentLogger ()
+let another = Logging.getLoggerByName &quot;Corp.App.Svc&quot;
+</code></pre>
+
+<p>or in <strong>C#</strong></p>
+<pre class="prettyprint well"><code class="csharp">namespace A {
+  class X {
+    static readonly Logger _logger = Logging.GetCurrentLogger();
+    void XX () {
+      _logger.Info(&quot;hello world&quot;);
+    }
+  }
+}
+</code></pre>
+
+<p>The Logger module will automatically discover the current
+call-site/function/module/class.and use its hierarchy to create a new logger.
+The idea is that you can use Rule.hiera regexpes to selectively enable or
+disable loggers, just like you can in NLog and log4net.</p>
+<p>The static logger is automatically wired up to the framework the instant that
+you run the <code>withLogary'</code> or <code>runWithGoodDefaults</code> from the
+<code>Logary.Configuration</code> namespace (in which you find the <code>Config</code> module).</p>
 <h2 id="healthchecks-metrics-probes">HealthChecks, Metrics, Probes</h2>
 <p>Health Checks are like probes, but know how to interpret the results into the
 warning-levels of <code>LogLevel</code>.</p>
