@@ -263,7 +263,7 @@ let main argv =
         Console.create Console.empty &quot;console&quot;
       ] &gt;&gt;
       withMetrics (Duration.FromMilliseconds 5000L) [
-        WinPerfCounters.create (WinPerfCounters.Common.cpuTime) &quot;cpuTime&quot; (Duration.FromMilliseconds 500L)
+        WinPerfCounters.create (WinPerfCounters.Common.cpuTimeConf) &quot;wperf&quot; (Duration.FromMilliseconds 300L)
       ] &gt;&gt;
       withRules [
         Rule.createForTarget &quot;riemann&quot;
