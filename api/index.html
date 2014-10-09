@@ -270,7 +270,7 @@ let main argv =
         Rule.createForTarget &quot;console&quot;
       ] &gt;&gt;
       withInternalTargets Info [
-        Console.create (Console.ConsoleConf.Default) &quot;console&quot;
+        Console.create (Console.empty) &quot;console&quot;
       ]
     )
 
