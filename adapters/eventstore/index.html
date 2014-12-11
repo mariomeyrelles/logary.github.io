@@ -6,10 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Henrik Feldt">
-        <link rel="canonical" href="https://logary.github.io/advanced/reservoirs/">
+        <link rel="canonical" href="https://logary.github.io/adapters/eventstore/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-        <title>Reservoirs - Logary</title>
+        <title>EventStore - Logary</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -131,28 +131,28 @@
             
             
             
-                <li class="dropdown">
+                <li class="dropdown active">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Adapters <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
                         <li >
-                            <a href="../../adapters/overview/">Overview</a>
+                            <a href="../overview/">Overview</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="./">EventStore</a>
                         </li>
                     
                         <li >
-                            <a href="../../adapters/eventstore/">EventStore</a>
+                            <a href="../suave/">Suave</a>
                         </li>
                     
                         <li >
-                            <a href="../../adapters/suave/">Suave</a>
+                            <a href="../topshelf/">Topshelf</a>
                         </li>
                     
                         <li >
-                            <a href="../../adapters/topshelf/">Topshelf</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../../adapters/log4net/">log4net</a>
+                            <a href="../log4net/">log4net</a>
                         </li>
                     
                     </ul>
@@ -160,36 +160,36 @@
             
             
             
-                <li class="dropdown active">
+                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Advanced <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
                         <li >
-                            <a href="../overview/">Overview</a>
+                            <a href="../../advanced/overview/">Overview</a>
                         </li>
                     
                         <li >
-                            <a href="../v2-refactor/">v2.0-refactor</a>
-                        </li>
-                    
-                        <li class="active">
-                            <a href="./">Reservoirs</a>
+                            <a href="../../advanced/v2-refactor/">v2.0-refactor</a>
                         </li>
                     
                         <li >
-                            <a href="../writing-a-target/">Writing a Target</a>
+                            <a href="../../advanced/reservoirs/">Reservoirs</a>
                         </li>
                     
                         <li >
-                            <a href="../writing-a-metric/">Writing a Metric</a>
+                            <a href="../../advanced/writing-a-target/">Writing a Target</a>
                         </li>
                     
                         <li >
-                            <a href="../thinking-about-time/">Thinking About Time</a>
+                            <a href="../../advanced/writing-a-metric/">Writing a Metric</a>
                         </li>
                     
                         <li >
-                            <a href="../contributing/">Contributing</a>
+                            <a href="../../advanced/thinking-about-time/">Thinking About Time</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../advanced/contributing/">Contributing</a>
                         </li>
                     
                     </ul>
@@ -208,12 +208,12 @@
             <ul class="nav navbar-nav navbar-right">
                 
                 <li >
-                    <a rel="next" href="../v2-refactor/">
+                    <a rel="next" href="../overview/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../writing-a-target/">
+                    <a rel="prev" href="../suave/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -236,61 +236,29 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#rura-animosa-agnovit-perque-et-nondum-quoque">Rura animosa agnovit perque et nondum quoque</a></li>
-        
-            <li><a href="#hac-si-dextro">Hac si dextro</a></li>
-        
-            <li><a href="#alebat-nec-et-transit-est-cautus-levi">Alebat nec et transit est cautus levi</a></li>
-        
-            <li><a href="#fontes-erat">Fontes erat</a></li>
-        
-            <li><a href="#solo-ponit-vicisse">Solo ponit vicisse</a></li>
+        <li class="main active"><a href="#eventstore-adapter">EventStore adapter</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="rura-animosa-agnovit-perque-et-nondum-quoque">Rura animosa agnovit perque et nondum quoque</h1>
-<h2 id="hac-si-dextro">Hac si dextro</h2>
-<p>Lorem <strong>markdownum</strong>, bracchia habitu maculosae in opus ait, id certam tardo,
-quae hanc! Est mersis <em>congeriem</em> lintea oppugnant glaciali crus, nondum saevi.</p>
-<h2 id="alebat-nec-et-transit-est-cautus-levi">Alebat nec et transit est cautus levi</h2>
-<p>Summa <strong>vestes</strong> vocis. Media et amictae urbe vocantem et dixit, meae simul
-reverentia iactanti poscere. Et illas ambagibus gravem Polydorus te caudam
-bicolor pars precor?</p>
-<ul>
-<li>In in sic insons moratur</li>
-<li>Per ingratus hanc reflectitur hosti</li>
-<li>Toris exstinctos cultusque erat</li>
-<li>Nonaque vocem nequiquam Aventino signum plangore deduxit</li>
-<li>Patruo si ipse dulce thalamoque inpius pone</li>
-</ul>
-<h2 id="fontes-erat">Fontes erat</h2>
-<p>Alcyone cum sentit ministrae vestibus palude, quas decimum nihil. Audiat nomine,
-ille quae ter tenebat tumulo! Se plura exsangue lupum: dum feci, notatas postes,
-crescitque. Equorum magnanimi obliquis adflabat, fixa obrutaque dumque plagis,
-hoc nunc circumque adactus; Sunt validum.</p>
-<pre class="prettyprint well"><code>if (1 / vramCross.click_aix_cpl.ict_ram(-3, clockClusterUnit) &gt;
-        gnutellaGigoBar.vpn(qbeHard + 903179, css + google, software)) {
-    errorComputer.file_character(correction_tape);
-    cc_cyberspace.dongleMarkup = design;
-}
-bus.mbr(cdnMemory * compactDlcSoft, fileComputer.telecommunications_soa(-1,
-        camera));
-mnemonicDuplexBar.mamp_hard.middleware(file, copyResponsiveChipset);
+<h1 id="eventstore-adapter">EventStore adapter</h1>
+<p>The <a href="http://geteventstore.com/">EventStore</a> adapter is really easy to use; just
+call <a href="https://github.com/EventStore/EventStore/blob/dev/src/EventStore.Common/Log/LogManager.cs#L80">LogManager.SetLogFactory</a> with it.</p>
+<p>First <code>Install-Package Intelliplan.Logary.Adapters.EventStore</code> from nuget to get
+the package.</p>
+<p>Usage:</p>
+<pre class="prettyprint well"><code class="fsharp">open EventStore.ClientAPI
+open EventStore.ClientAPI.Common.Log
+
+use logary =  ...
+
+LogManager.SetLogFactory(fun name -&gt; LogaryAdapter(logary.GetLogger name))
 </code></pre>
-<h2 id="solo-ponit-vicisse">Solo ponit vicisse</h2>
-<p>Intra paulum, ille habitat nam: atque super flammas contraque sceptroque aera
-fortisque parte. Similem Cycladas lateri riguerunt postquam tanto idque
-fluctibus hostis vento confusa. Et ego pennaeque adversi. Ceyx cum lacertis
-<a href="http://www.reddit.com/r/haskell">aegra</a>; amem Tigris simul, nec lumina
-iuvencae, sine cum, dulces illic.</p>
-<p>Densus potest et Minervae exstabat credis et quaerunt mihi praesentior umeri. Tu
-virga et numen! Videt videndi currus; neque ferre non mixtae quid caelo coegit,
-surrexit hoc, nam. Esse non te Penelopaeque omnes illo victus.</p>
-<p>Ab obliqua caelum agmenque mortalia errorem arreptamque tamen fuisses messes: et
-tum circumdata. In quoniam praecordia iacet; arbor cum natasque tanti.</p>
+
+<p>Also see <a href="docs.geteventstore.com/dotnet-api/3.0.1/configuring-logging">configuring
+logging</a>.</p>
 </div>
         </div>
 

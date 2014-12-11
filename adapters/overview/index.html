@@ -140,6 +140,10 @@
                         </li>
                     
                         <li >
+                            <a href="../eventstore/">EventStore</a>
+                        </li>
+                    
+                        <li >
                             <a href="../suave/">Suave</a>
                         </li>
                     
@@ -209,7 +213,7 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../suave/">
+                    <a rel="prev" href="../eventstore/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -232,56 +236,54 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#plausis-crines">Plausis crines</a></li>
+        <li class="main active"><a href="#logary-adapters">Logary Adapters</a></li>
         
-            <li><a href="#scalas-se-neve-illum-petebar-amantes-requirere">Scalas se neve illum petebar amantes requirere</a></li>
+            <li><a href="#suave">Suave</a></li>
         
-            <li><a href="#pulchram-ferro-stravit-si-vincere-contineat-subsedit">Pulchram ferro stravit si vincere contineat subsedit</a></li>
+            <li><a href="#topshelf">Topshelf</a></li>
         
-            <li><a href="#transitus-nescio-victrices-latens-flecti-vestes-sint">Transitus nescio victrices latens flecti vestes sint</a></li>
+            <li><a href="#eventstore">EventStore</a></li>
+        
+            <li><a href="#commonlogging">CommonLogging</a></li>
+        
+            <li><a href="#log4net">log4net</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="plausis-crines">Plausis crines</h1>
-<h2 id="scalas-se-neve-illum-petebar-amantes-requirere">Scalas se neve illum petebar amantes requirere</h2>
-<p>Lorem markdownum seque et unda que quam potest cornu ipse rabies. Neque ex erat
-vetuere pervia exsatiata feruntur proditione me erat poscunt quae sorores. Cum
-terraeque canibus auferat, nam peteret, selige, sua quoque pastores antiquas?
-Artus de esse fuit <a href="http://www.metafilter.com/">vara</a>; et datur contudit exiguo
-postquam requirit, relinquam ad colla conclamat sparsa, crimen.</p>
-<p>Massa pio id per perfide tellurem ait seque auribus misit gaudete nutricis frui
-infamataeque digitis in quae. Rimis Herculis deserit! Nec ac, fer corpora data
-infausto adeunt, firmamina talibus tetigere cetera, <em>vultu</em>.</p>
-<h2 id="pulchram-ferro-stravit-si-vincere-contineat-subsedit">Pulchram ferro stravit si vincere contineat subsedit</h2>
-<p>Palpitat idem spatium, cernitis sciet te <em>Iovi nec tamen</em>. Et gemitum tegemus
-truncaque priore Eurylochum At? Cum pro et ferarum vero, opertos a <strong>in</strong>
-medentes periture laetos letali ait Phoebus <em>aries</em> tumulus? Merumque quas
-<em>dedimus</em>, ubi iuvenum quae ore temporis manes in in vimen. Eat visa; gravidae
-illis omnemque vulnere versant patruique missos navis.</p>
-<ul>
-<li>Caede ne roseo</li>
-<li>Alta timens</li>
-<li>Fuit Cyclopis</li>
-</ul>
-<h2 id="transitus-nescio-victrices-latens-flecti-vestes-sint">Transitus nescio victrices latens flecti vestes sint</h2>
-<p>Gemellam origine petunt utque et denique incendia murmur commissaque dives,
-aduncos neu est. Loqui vana Minos rota iuvat abiit teloque tulit, at <a href="http://www.reddit.com/r/haskell">in
-Ulixe</a>. <em>Aut</em> tori divorum diffusum succincta
-setius, aut fuerunt tales eum cum. Duce vos modo nec reponuntur vestra videtur
-sub.</p>
-<ol>
-<li>Modo torum quid sua</li>
-<li>Post si ramis cui nimium vellem furoris</li>
-<li>Discutiunt insonuit grandia triplicesque paene tundit</li>
-</ol>
-<p>Utinam et iamque nocent hominum et quis plumas ferinae propiore <strong>cinctaeque
-ortus</strong>; trepidare vigil ab! Sui summoque: tergumque iam, lacrimis, <strong>aris
-nunc</strong> mole levi fueris debita, Danaam Latonia nece! Et nubibus Atrides iniquae
-eburnae laterum quem capacis, Hister quae furca templa. Et natusque sine duabus
-Meropisque ad tamen Threiciis tectis: leaena, et.</p>
+<h1 id="logary-adapters">Logary Adapters</h1>
+<p>Adapters are plug-ins into OTHER libraries, which can then output their internal
+logs into logary, which in turn takes care of sending those logs further.</p>
+<h2 id="suave">Suave</h2>
+<p>Usage:</p>
+<pre class="prettyprint well"><code class="fsharp">let web_config =
+  { default_config with
+      bindings = context.settings.GetBindings ()
+      logger   = SuaveAdapter(logary.GetLogger &quot;suave&quot;)
+  }
+</code></pre>
+
+<h2 id="topshelf">Topshelf</h2>
+<p>Usage</p>
+<p>TBD</p>
+<h2 id="eventstore">EventStore</h2>
+<p>Usage:</p>
+<pre class="prettyprint well"><code class="fsharp">open EventStore.ClientAPI
+open EventStore.ClientAPI.Common.Log
+
+use logary =  ...
+
+LogManager.SetLoggerFactory(fun name -&gt; LogaryAdapter(logary.GetLogger name))
+</code></pre>
+
+<p>Also see <a href="docs.geteventstore.com/dotnet-api/3.0.1/configuring-logging">configuring
+logging</a>.</p>
+<h2 id="commonlogging">CommonLogging</h2>
+<p>Please help fill out!</p>
+<h2 id="log4net">log4net</h2>
+<p>Please help fill out!</p>
 </div>
         </div>
 
