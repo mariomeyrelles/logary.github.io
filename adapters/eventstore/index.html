@@ -258,7 +258,6 @@ open EventStore.ClientAPI.Common.Log
 
 use logary =  ...
 
-
 let conn =
   ConnectionSettings.configureStart()
   |&gt; ConnectionSettings.useCustomLogger (LogaryLogger(logary.GetLogger(&quot;EventStore&quot;)))
