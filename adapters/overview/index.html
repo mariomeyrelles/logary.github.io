@@ -275,7 +275,9 @@ open EventStore.ClientAPI.Common.Log
 
 use logary =  ...
 
-LogManager.SetLoggerFactory(fun name -&gt; LogaryAdapter(logary.GetLogger name))
+Conn.configureStart()
+|&gt; fun settings -&gt; settings.UseCustomLogger(LogaryLogger(logary.GetLogger(&quot;EventStore&quot;)))
+|&gt; Conn.configureEnd (IPEndPoint(IPAddress.Loopback, 1113))
 </code></pre>
 
 <p>Also see <a href="docs.geteventstore.com/dotnet-api/3.0.1/configuring-logging">configuring

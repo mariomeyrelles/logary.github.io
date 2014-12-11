@@ -246,15 +246,21 @@
 <h1 id="eventstore-adapter">EventStore adapter</h1>
 <p>The <a href="http://geteventstore.com/">EventStore</a> adapter is really easy to use; just
 call <a href="https://github.com/EventStore/EventStore/blob/dev/src/EventStore.Common/Log/LogManager.cs#L80">LogManager.SetLogFactory</a> with it.</p>
-<p>First <code>Install-Package Intelliplan.Logary.Adapters.EventStore</code> from nuget to get
-the package.</p>
+<p>First:</p>
+<pre class="prettyprint well"><code>Install-Package Intelliplan.Logary.Adapters.EventStore
+Install-Package EventStore.Client.FSharp
+</code></pre>
+
+<p>to get the nicities for F#.</p>
 <p>Usage:</p>
 <pre class="prettyprint well"><code class="fsharp">open EventStore.ClientAPI
 open EventStore.ClientAPI.Common.Log
 
 use logary =  ...
 
-LogManager.SetLogFactory(fun name -&gt; LogaryAdapter(logary.GetLogger name))
+Conn.configureStart()
+|&gt; fun settings -&gt; settings.UseCustomLogger(LogaryLogger(logary.GetLogger(&quot;EventStore&quot;)))
+|&gt; Conn.configureEnd (IPEndPoint(IPAddress.Loopback, 1113))
 </code></pre>
 
 <p>Also see <a href="docs.geteventstore.com/dotnet-api/3.0.1/configuring-logging">configuring
