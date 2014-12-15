@@ -248,10 +248,16 @@
             <div class="col-md-9" role="main">
 
 <h1 id="logstash-logary-target">Logstash - Logary Target</h1>
-<p>Logstash is a log router that is highly capable of funneling the events further.
-When using logary, you should understand that the point of logging libraries is
-getting the logs off the node and into a stable storage where they can be
-searched and analysed as quick as possible.</p>
+<p><strong>For LogLines | builtin</strong></p>
+<p>Logstash is
+a log router that can move your logs to the best location available.</p>
+<blockquote>
+<p><strong>Manage events and logs</strong>. Elasticsearch works seamlessly with Logstash to
+collect, parse, index, and search logs</p>
+</blockquote>
+<pre class="prettyprint well"><code class="powershell">Install-Package Intelliplan.Logary 
+</code></pre>
+
 <p><img alt="Logstash" src="https://raw.githubusercontent.com/logary/logary-assets/master/targets/logstash.png" /></p>
 <p>This target sends logs to logstash using a TCP socket, meaning there's not that
 much to set up to get started. This means that once in a blue moon you'll

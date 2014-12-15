@@ -244,6 +244,12 @@
             <div class="col-md-9" role="main">
 
 <h1 id="console-logary-target">Console - Logary Target</h1>
+<p><strong>For LogLines | builtin</strong></p>
+<p>Writes output messages to <code>System.Console.Out</code> and Error, and Fatal LogLines
+to <code>System.Console.Error</code>.</p>
+<pre class="prettyprint well"><code class="powershell">Install-Package Intelliplan.Logary 
+</code></pre>
+
 <p>The console target is very simple to use and create:</p>
 <pre class="prettyprint well"><code class="fsharp">use logary =
   withLogary' &quot;Console Example&quot; (

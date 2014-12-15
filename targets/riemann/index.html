@@ -236,59 +236,33 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#origine-felix-inhibe-locus-fervoribus-gaude">Origine felix inhibe locus fervoribus gaude</a></li>
-        
-            <li><a href="#uva-qua-cephaloque-munus">Uva qua Cephaloque munus</a></li>
-        
-            <li><a href="#quae-inquit-et-et-auras-liquido-platanus">Quae inquit et et auras liquido platanus</a></li>
-        
-            <li><a href="#ponar-et-vinclis-filia">Ponar et vinclis filia</a></li>
-        
-            <li><a href="#iuvenis-non-novae-nostras-fata">Iuvenis non novae nostras fata</a></li>
+        <li class="main active"><a href="#riemann-logary-target">Riemann - Logary Target</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="origine-felix-inhibe-locus-fervoribus-gaude">Origine felix inhibe locus fervoribus gaude</h1>
-<h2 id="uva-qua-cephaloque-munus">Uva qua Cephaloque munus</h2>
-<p>Lorem markdownum rapuit meminisse Achilles undas quantum et alta <em>amaverat</em>! Sub
-ceu inter pars, fabula Unde, <strong>verborum Arethusa</strong>, capiti abest nimiumque
-successibus patria nubere bene carmina <strong>exacta</strong>. Fulminis contentique herba,
-ferunt, qui ardua Cecropis petit blanditiis puellis nubes, si pocula nuntia.
-<a href="http://www.uselessaccount.com/">Etiam</a> loco, habet Nilo erit crimen insurgere,
-captis non luctus scylla suspicit magna frementis leto.</p>
-<ol>
-<li>Oppressumque ferro conscia sine</li>
-<li>Refert luce inposita verba nec oculos nunc</li>
-<li>Liquidi saepe</li>
-<li>Excipit caput incustoditae Osiris secus quod alis</li>
-</ol>
-<h2 id="quae-inquit-et-et-auras-liquido-platanus">Quae inquit et et auras liquido platanus</h2>
-<p>Lucifer turbata subtexere dixit: cauda Numam sibi super, dilectos est parva, ora
-tu credunt cedere, Heliadum? Curam subito, bubo. Quaeritur currus in domus
-monstri opus, ara iram Cephaloque fuit dulces potuisse ludit. Parvam insonat
-pressistis et illic.</p>
-<h2 id="ponar-et-vinclis-filia">Ponar et vinclis filia</h2>
-<p>Ira partem ternisque Tyria expresso <a href="http://www.raynelongboards.com/">Sibyllae</a>
-finem lucis belli violata gesserit turba. Patria aves per praeterque tamen: rura
-revertentes valle <em>mirabile invasit iuvenem</em> vaticinata inquit <em>retro</em>!
-Distinctas pretium nocti procumbit <em>sacra</em>, contingere servo si quem.</p>
-<p>Inoo est fuit: fusus viae nullum? Aura saxa habebam inveniebantur pedes Famem
-circumfusaeque obruit dum proximus obibat relinquite laudes freta virgine
-patrios? Nam arcus suis ornata paene exstat nolis vimque ut qui exilio quos
-nudumque, fertilitatis tantis et solida. Ad partus, Achivam Perseu; e intrat ego
-postquam victrix rotatum culpavit, <em>solum frondibus</em>! Seu et, ad candore <em>vixque
-recondidit</em> fuerat.</p>
-<h2 id="iuvenis-non-novae-nostras-fata">Iuvenis non novae nostras fata</h2>
-<p>Debilis legem! Illa cuius refringit sed: est noctis mittor animo servas,
-femineae sub, lenita retro Troiaeque. Annos adversum ad nobis corpore foedantem
-repagula, quod potes. Hoc adductaque petit nimbos eloquitur margine contemptus
-canna incertae aquas!</p>
-<p>Quod ignotosque gente, Isi ictibus, exierat naribus aetas. Lacrimosa huc, aut
-vertice mille ora umero corruit, fallaciter carmina non ibat <strong>nomine</strong>, sua
-platanum.</p>
+<h1 id="riemann-logary-target">Riemann - Logary Target</h1>
+<p><strong>For Measures</strong></p>
+<p>This target writes Measures to Riemann and is being used for sending metrics
+from SQLServerHealth, for example. Sending them to riemann gives a platform to
+start acting on what goes on in your system and can be a way to provide
+auto-scaling to your deployments based off of application metrics.</p>
+<p>Riemann is built in Clojure, and so is its config, so it gives you an
+opportunity to try something new and learn a nice language.</p>
+<blockquote>
+<p><strong>Riemann monitors distributed systems.</strong> Riemann aggregates events from your
+servers and applications with a powerful stream processing language.</p>
+</blockquote>
+<pre class="prettyprint well"><code class="powershell">Install-Package Intelliplan.Logary.Riemann 
+</code></pre>
+
+<p><img alt="Riemann" src="https://raw.githubusercontent.com/logary/logary-assets/master/targets/riemann.png" /></p>
+<p>As a matter of fact, I have implemented a brand <a href="https://github.com/logary/logary/blob/feature/protobuf-riemann/src/Logary.Riemann/Client.fs#L56">new .Net
+client</a>
+for Riemann, to make it stable and to make it fit well with Logary's
+actor-based approach. More usage examples on this will follow.</p>
 </div>
         </div>
 

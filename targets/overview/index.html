@@ -238,31 +238,15 @@
     
         <li class="main active"><a href="#targets-overview">Targets Overview</a></li>
         
-            <li><a href="#textwriter">TextWriter</a></li>
+            <li><a href="#milestone-0">Milestone 0</a></li>
         
-            <li><a href="#console">Console</a></li>
+            <li><a href="#milestone-1">Milestone 1</a></li>
         
-            <li><a href="#debugger">Debugger</a></li>
+            <li><a href="#milestone-2">Milestone 2</a></li>
         
-            <li><a href="#logstash">Logstash</a></li>
+            <li><a href="#milestone-3">Milestone 3</a></li>
         
-            <li><a href="#graphite">Graphite</a></li>
-        
-            <li><a href="#elmahio">Elmah.IO</a></li>
-        
-            <li><a href="#logentries">Logentries</a></li>
-        
-            <li><a href="#loggr">Loggr</a></li>
-        
-            <li><a href="#riemann">Riemann</a></li>
-        
-            <li><a href="#db">DB</a></li>
-        
-            <li><a href="#nimrod">Nimrod</a></li>
-        
-            <li><a href="#dash">Dash</a></li>
-        
-            <li><a href="#zipkin">Zipkin</a></li>
+            <li><a href="#available-targets">Available Targets</a></li>
         
     
     </ul>
@@ -272,159 +256,91 @@
 <h1 id="targets-overview">Targets Overview</h1>
 <p>These are the targets supported by Logary. If you write a target, then send a PR
 towards this documentation and everyone can enjoy using it!</p>
-<h2 id="textwriter">TextWriter</h2>
-<p><strong>For LogLines | builtin</strong></p>
-<p>Write to any text writer - such as one from <code>System.IO.File.OpenWrite</code>.</p>
-<pre class="prettyprint well"><code class="powershell">Install-Package Intelliplan.Logary 
-</code></pre>
-
-<h2 id="console">Console</h2>
-<p><strong>For LogLines | builtin</strong></p>
-<p>Writes output messages to <code>System.Console.Out</code> and Error, and Fatal LogLines
-to <code>System.Console.Error</code>.</p>
-<pre class="prettyprint well"><code class="powershell">Install-Package Intelliplan.Logary 
-</code></pre>
-
-<h2 id="debugger">Debugger</h2>
-<p><strong>For LogLines | builtin</strong></p>
-<p>Writes all output to the Debugger-console of Visual Studio, Xamarin Studio or
-MonoDevelop.</p>
-<pre class="prettyprint well"><code class="powershell">Install-Package Intelliplan.Logary 
-</code></pre>
-
-<h2 id="logstash">Logstash</h2>
-<p><strong>For LogLines | builtin</strong></p>
-<p>Logstash is
-a log router that can move your logs to the best location available.</p>
-<blockquote>
-<p><strong>Manage events and logs</strong>. Elasticsearch works seamlessly with Logstash to
-collect, parse, index, and search logs</p>
-</blockquote>
-<pre class="prettyprint well"><code class="powershell">Install-Package Intelliplan.Logary 
-</code></pre>
-
-<p><img alt="Logstash" src="https://raw.githubusercontent.com/logary/logary-assets/master/targets/logstash.png" /></p>
-<h2 id="graphite">Graphite</h2>
-<p><strong>For Measures | builtin</strong></p>
-<p>The <a href="http://graphite.wikidot.com/faq">graphite</a> target is a mature target for
-sending Measures from your application.</p>
-<blockquote>
-<p><strong>Graphite - Scalable Realtime Graphing.</strong>  Graphite is a highly scalable
-real-time graphing system. As a user, you write an application that collects
-numeric time-series data that you are interested in graphing, and send it to
-Graphite's processing backend, carbon, which stores the data in Graphite's
-specialized database. The data can then be visualized through graphite's web
-interfaces.</p>
-</blockquote>
-<p>Best used in conjunction with <a href="http://grafana.org/">Grafana</a> (a web front-end):</p>
-<blockquote>
-<p>An open source, feature rich metrics dashboard and graph editor for Graphite,
-InfluxDB &amp; OpenTSDB. Rich graphing: Fast and flexible client side graphs with
-a multitude of options.</p>
-</blockquote>
-<pre class="prettyprint well"><code class="powershell">Install-Package Intelliplan.Logary 
-</code></pre>
-
-<p><img alt="Grafana" src="https://raw.githubusercontent.com/logary/logary-assets/master/targets/grafana.png" /></p>
-<h2 id="elmahio">Elmah.IO</h2>
-<p><strong>For LogLines</strong></p>
-<p>Interop target if you are writing a web application and have
-<a href="https://elmah.io/">Elmah.IO</a> as your log dashboard. <span title="Unless you're
-scared of the big, big world out there, consider using something that many other
-sorts of developers than .Net developers use, such as one of the other
-targets">.Net developer friendly indeed</span>.</p>
-<pre class="prettyprint well"><code class="powershell">Install-Package Intelliplan.Logary.ElmahIO 
-</code></pre>
-
-<p><img alt="Elmah.IO" src="https://raw.githubusercontent.com/logary/logary-assets/master/targets/elmahio.png" /></p>
-<h2 id="logentries">Logentries</h2>
-<p><strong>For LogLines and Measures</strong></p>
-<blockquote>
-<p>Fast Search &amp; Real-time Log Processing - Centralized search, aggregation, and
-correlation. See query results in seconds.</p>
-</blockquote>
-<pre class="prettyprint well"><code class="powershell">Install-Package Intelliplan.Logary.Logentries 
-</code></pre>
-
-<p>All logging to Logentries is encrypted.</p>
-<p><img alt="Logentries" src="https://raw.githubusercontent.com/logary/logary-assets/master/targets/logentries.png" /></p>
-<h2 id="loggr">Loggr</h2>
-<p><strong>For LogLines</strong></p>
-<blockquote>
-<p><strong>Monitor Your Web Apps in Realtime</strong>
-Get a control panel for your web app with event logging, user monitoring,
-analytics, notifications and more</p>
-</blockquote>
-<pre class="prettyprint well"><code class="powershell">Install-Package Intelliplan.Logary.Loggr 
-</code></pre>
-
-<p><img alt="Loggr" src="https://raw.githubusercontent.com/logary/logary-assets/master/targets/loggr.png" /></p>
-<h2 id="riemann">Riemann</h2>
-<p><strong>For Measures</strong></p>
-<p>This target writes Measures to Riemann and is being used for sending metrics
-from SQLServerHealth, for example. Sending them to riemann gives a platform to
-start acting on what goes on in your system and can be a way to provide
-auto-scaling to your deployments based off of application metrics.</p>
-<p>Riemann is built in Clojure, and so is its config, so it gives you an
-opportunity to try something new and learn a nice language.</p>
-<blockquote>
-<p><strong>Riemann monitors distributed systems.</strong> Riemann aggregates events from your
-servers and applications with a powerful stream processing language.</p>
-</blockquote>
-<pre class="prettyprint well"><code class="powershell">Install-Package Intelliplan.Logary.Riemann 
-</code></pre>
-
-<p><img alt="Riemann" src="https://raw.githubusercontent.com/logary/logary-assets/master/targets/riemann.png" /></p>
-<p>As a matter of fact, I have implemented a brand <a href="https://github.com/logary/logary/blob/feature/protobuf-riemann/src/Logary.Riemann/Client.fs#L56">new .Net
-client</a>
-for Riemann, to make it stable and to make it fit well with Logary's
-actor-based approach. More usage examples on this will follow.</p>
-<h2 id="db">DB</h2>
-<p><strong>For LogLines and Measures</strong></p>
-<p>This target logs asynchronously to a database, using ADO.Net. You can configure
-any connection factory through the target's configuration.</p>
-<p>The target also comes with <strong>Logary.DB.Migrations</strong> that set up the database
-state for both logs and metrics on boot, if not already existent.</p>
-<pre class="prettyprint well"><code class="powershell">Install-Package Intelliplan.Logary.DB 
-Install-Package Intelliplan.Logary.DB.Migrations 
-</code></pre>
-
-<h2 id="nimrod">Nimrod</h2>
-<p><strong>For LogLines and Measures | builtin</strong></p>
-<p>Nimrod is a metrics server based on log processing - as such it can handle both
-LogLines and Measures.</p>
-<blockquote>
-<p>Nimrod is a metrics server purely based on log processing: hence, it doesn't
-affect the way you write your applications, nor has it any side effect on them.</p>
-</blockquote>
-<p><strong>Part of the core assembly:</strong></p>
-<pre class="prettyprint well"><code class="powershell">Install-Package Intelliplan.Logary 
-</code></pre>
-
-<p><img alt="Nimrod" src="https://raw.githubusercontent.com/logary/logary-assets/master/targets/nimrod.png" /></p>
-<h2 id="dash">Dash</h2>
-<p>Work in progress - aims to provide the same dashboard as Metrics.Net, allowing
-you runtime insight into your programs.</p>
-<pre class="prettyprint well"><code class="powershell">Install-Package Intelliplan.Logary.Dash 
-</code></pre>
-
-<p>The dashboard uses the awesome F# web server <a href="http://suave.io/">suave.io</a>.</p>
-<h2 id="zipkin">Zipkin</h2>
-<p><strong>For LogLines - and adds Spans</strong></p>
-<p>Currently work in progress: LogLines and Measures become annotations to Spans
-which are correlated in process and then sent through Thrift to the Zipkin
-server as Spans/traces.</p>
-<blockquote>
-<p>Zipkin is a distributed tracing system that helps us gather timing data for
-all the disparate services at Twitter. It manages both the collection and
-lookup of this data through a Collector and a Query service. We closely
-modelled Zipkin after the Google Dapper paper. Follow @ZipkinProject for
-updates.</p>
-</blockquote>
-<pre class="prettyprint well"><code class="powershell">Install-Package Intelliplan.Logary.Zipkin 
-</code></pre>
-
-<p><img alt="Zipkin" src="https://raw.githubusercontent.com/logary/logary-assets/master/targets/zipkin.png" /></p>
+<p>Some targets have been extensively tested and some less. We have the same
+milestone-model as <a href="http://logstash.net/docs/1.4.2/plugin-milestones">logstash</a>:</p>
+<h3 id="milestone-0">Milestone 0</h3>
+<p>Development on this target has just begun and you can't expect everything, if
+anything, to work. If you are interested in the functionality, please
+contribute your time!</p>
+<h3 id="milestone-1">Milestone 1</h3>
+<p>Plugins at this milestone need your feedback to improve! Plugins at this
+milestone may change between releases as the community figures out the best way
+for the plugin to behave and be configured.</p>
+<h3 id="milestone-2">Milestone 2</h3>
+<p>Plugins at this milestone are more likely to have backwards-compatibility to
+previous releases than do Milestone 1 plugins. This milestone also indicates a
+greater level of in-the-wild usage by the community than the previous milestone.</p>
+<h3 id="milestone-3">Milestone 3</h3>
+<p>Plugins at this milestone have strong promises towards backwards-compatibility.
+This is enforced with automated tests to ensure behavior and configuration are
+consistent across releases.</p>
+<h2 id="available-targets">Available Targets</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Target</th>
+<th>Capabilities</th>
+<th align="right">Milestone</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="../textwriter/">TextWriter</a></td>
+<td>LogLine, Measure</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td align="left">Console</td>
+<td>LogLine,</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td align="left">Debugger</td>
+<td>LogLine, Measure</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td align="left">Logstash</td>
+<td>LogLine</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td align="left">Graphite</td>
+<td>Measure</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td align="left">Elmah.IO</td>
+<td>LogLine</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td align="left">Logentries</td>
+<td>LogLine</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td align="left">Riemann</td>
+<td>LogLine</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td align="left">DB</td>
+<td>LogLine, Measure</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td align="left">Dash</td>
+<td>LogLine, Measure</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">ZipKin</td>
+<td>LogLine, Measure</td>
+<td align="right">0</td>
+</tr>
+</tbody>
+</table>
 </div>
         </div>
 
