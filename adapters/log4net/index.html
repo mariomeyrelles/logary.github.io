@@ -9,14 +9,14 @@
         <link rel="canonical" href="https://logary.github.io/adapters/log4net/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-        <title>log4net - Logary</title>
+        <title>log4net</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
         <link href="../../css/prettify-1.0.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
         
-            <link href="../../css/fixes.css" rel="stylesheet" />
+            <link href="../../../../css/fixes.css" rel="stylesheet" />
         
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -253,7 +253,7 @@ libs and software that uses log4net to get things done, and you don't have time
 to completely replace the logging infrastructure throughout your company.</p>
 <p>Well, you're in luck! Now there's a log4net appender that you can use to get
 access to all the niceties of Logary.</p>
-<pre class="prettyprint well"><code class="powershell">Install-Package Logary.Adapters.log4net
+<pre><code class="powershell">Install-Package Logary.Adapters.log4net
 </code></pre>
 
 <p>Now, add the adapter to your log4net configuration -- I recommend having the
@@ -261,15 +261,14 @@ message as the only message, instead of polluting the message with all sorts of
 data-items that automatically get passed to the 'data' property of the LogLine,
 anyhow.</p>
 <p>Hence:</p>
-<pre class="prettyprint well"><code class="xml">&lt;appender name=&quot;LogaryAppender&quot; type=&quot;log4net.Appender.LogaryAppender&quot;&gt;
+<pre><code class="xml">&lt;appender name=&quot;LogaryAppender&quot; type=&quot;log4net.Appender.LogaryAppender&quot;&gt;
     &lt;layout type=&quot;log4net.Layout.PatternLayout&quot;&gt;
         &lt;conversionPattern value=&quot;%message&quot; /&gt;
     &lt;/layout&gt;
 &lt;/appender&gt;
 </code></pre>
 
-<p>Happy logging!</p>
-</div>
+<p>Happy logging!</p></div>
         </div>
 
         

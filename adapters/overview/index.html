@@ -9,14 +9,14 @@
         <link rel="canonical" href="https://logary.github.io/adapters/overview/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-        <title>Overview - Logary</title>
+        <title>Overview</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
         <link href="../../css/prettify-1.0.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
         
-            <link href="../../css/fixes.css" rel="stylesheet" />
+            <link href="../../../../css/fixes.css" rel="stylesheet" />
         
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -262,7 +262,7 @@
 logs into logary, which in turn takes care of sending those logs further.</p>
 <h2 id="suave">Suave</h2>
 <p>Usage:</p>
-<pre class="prettyprint well"><code class="fsharp">let web_config =
+<pre><code class="fsharp">let web_config =
   { default_config with
       bindings = context.settings.GetBindings ()
       logger   = SuaveAdapter(logary.GetLogger &quot;suave&quot;)
@@ -274,7 +274,7 @@ logs into logary, which in turn takes care of sending those logs further.</p>
 <p>TBD</p>
 <h2 id="eventstore">EventStore</h2>
 <p>Usage:</p>
-<pre class="prettyprint well"><code class="fsharp">open EventStore.ClientAPI
+<pre><code class="fsharp">open EventStore.ClientAPI
 open EventStore.ClientAPI.Common.Log
 
 use logary =  ...
@@ -285,13 +285,12 @@ let conn =
   |&gt; ConnectionSettings.configureEnd (IPEndPoint(IPAddress.Loopback, 1113))
 </code></pre>
 
-<p>Also see <a href="docs.geteventstore.com/dotnet-api/3.0.1/configuring-logging">configuring
+<p>Also see <a href="../docs.geteventstore.com/dotnet-api/3.0.1/configuring-logging">configuring
 logging</a>.</p>
 <h2 id="commonlogging">CommonLogging</h2>
 <p>Please help fill out!</p>
 <h2 id="log4net">log4net</h2>
-<p>Please help fill out!</p>
-</div>
+<p>Please help fill out!</p></div>
         </div>
 
         

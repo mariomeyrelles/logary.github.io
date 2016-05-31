@@ -9,14 +9,14 @@
         <link rel="canonical" href="https://logary.github.io/targets/console/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-        <title>Console - Logary</title>
+        <title>Console</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
         <link href="../../css/prettify-1.0.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
         
-            <link href="../../css/fixes.css" rel="stylesheet" />
+            <link href="../../../../css/fixes.css" rel="stylesheet" />
         
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -251,24 +251,22 @@
 <p><strong>For LogLines | builtin</strong></p>
 <p>Writes output messages to <code>System.Console.Out</code> and Error, and Fatal LogLines
 to <code>System.Console.Error</code>.</p>
-<pre class="prettyprint well"><code class="powershell">Install-Package Logary
+<pre><code class="powershell">Install-Package Logary
 </code></pre>
 
 <p>The console target is very simple to use and create:</p>
-<pre class="prettyprint well"><code class="fsharp">use logary =
-  withLogary' &quot;Console Example&quot; (
+<pre><code class="fsharp">use logary =
+  withLogaryManager &quot;Console Example&quot; (
     withTargets [
-      Console.create (Console.ConsoleConf.Default) &quot;console&quot;
+      Console.create (Console.empty) (PointName.ofSingle &quot;console&quot;)
     ] &gt;&gt;
     withRules [
-      Rule.forAny &quot;console&quot;
+      Rule.createForTarget (PointName.ofSingle &quot;console&quot;)
     ])
 </code></pre>
 
-<pre class="prettyprint well"><code class="csharp">var x = LogaryFactory.New(&quot;Logary Specs&quot;, with =&gt; with.Target&lt;Console.Builder&gt;());
-</code></pre>
-
-</div>
+<pre><code class="csharp">var x = LogaryFactory.New(&quot;Logary Specs&quot;, with =&gt; with.Target&lt;Console.Builder&gt;());
+</code></pre></div>
         </div>
 
         

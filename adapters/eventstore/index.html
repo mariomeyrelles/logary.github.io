@@ -9,14 +9,14 @@
         <link rel="canonical" href="https://logary.github.io/adapters/eventstore/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-        <title>EventStore - Logary</title>
+        <title>EventStore</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
         <link href="../../css/prettify-1.0.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
         
-            <link href="../../css/fixes.css" rel="stylesheet" />
+            <link href="../../../../css/fixes.css" rel="stylesheet" />
         
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -251,13 +251,13 @@
 <p>The <a href="http://geteventstore.com/">EventStore</a> adapter is really easy to use; just
 call <a href="https://github.com/EventStore/EventStore/blob/dev/src/EventStore.Common/Log/LogManager.cs#L80">LogManager.SetLogFactory</a> with it.</p>
 <p>First:</p>
-<pre class="prettyprint well"><code>Install-Package Logary.Adapters.EventStore
+<pre><code>Install-Package Logary.Adapters.EventStore
 Install-Package EventStore.Client.FSharp
 </code></pre>
 
 <p>to get the nicities for F#.</p>
 <p>Usage:</p>
-<pre class="prettyprint well"><code class="fsharp">open EventStore.ClientAPI
+<pre><code class="fsharp">open EventStore.ClientAPI
 open EventStore.ClientAPI.Common.Log
 
 use logary =  ...
@@ -268,9 +268,8 @@ let conn =
   |&gt; ConnectionSettings.configureEnd (IPEndPoint(IPAddress.Loopback, 1113))
 </code></pre>
 
-<p>Also see <a href="docs.geteventstore.com/dotnet-api/3.0.1/configuring-logging">configuring
-logging</a>.</p>
-</div>
+<p>Also see <a href="../docs.geteventstore.com/dotnet-api/3.0.1/configuring-logging">configuring
+logging</a>.</p></div>
         </div>
 
         

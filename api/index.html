@@ -9,14 +9,14 @@
         <link rel="canonical" href="https://logary.github.io/api/">
         <link rel="shortcut icon" href="../img/favicon.ico">
 
-        <title>API - Logary</title>
+        <title>API</title>
 
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
         <link href="../css/prettify-1.0.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
         
-            <link href="../css/fixes.css" rel="stylesheet" />
+            <link href="../../css/fixes.css" rel="stylesheet" />
         
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -253,7 +253,7 @@
 
 <h1 id="api">API</h1>
 <p>This package works great with F#:</p>
-<pre class="prettyprint well"><code class="fsharp">open System
+<pre><code class="fsharp">open System
 
 open NodaTime
 
@@ -265,22 +265,22 @@ open Logary.Metrics
 [&lt;EntryPoint&gt;]
 let main argv =
   use logary =
-    withLogary' &quot;Riemann.Example&quot; (
+    withLogaryManager &quot;Riemann.Example&quot; (
       withTargets [
-        Riemann.create (Riemann.RiemannConf.Create(tags = [&quot;riemann-health&quot;])) &quot;riemann&quot;
-        Console.create Console.empty &quot;console&quot;
+        Riemann.create (Riemann.RiemannConf.create(tags = [&quot;riemann-health&quot;])) (PointName.ofSingle &quot;riemann&quot;)
+        Console.create Console.empty (PointName.ofSingle &quot;console&quot;)
       ] &gt;&gt;
       withMetrics (Duration.FromMilliseconds 5000L) [
-        WinPerfCounters.create (WinPerfCounters.Common.cpuTimeConf) &quot;wperf&quot; (Duration.FromMilliseconds 300L)
+        WinPerfCounters.create (WinPerfCounters.Common.cpuTimeConf) (PointName.ofSingle &quot;wperf&quot;)(Duration.FromMilliseconds 300L)
       ] &gt;&gt;
       withRules [
-        Rule.createForTarget &quot;riemann&quot;
-        Rule.createForTarget &quot;console&quot;
+        Rule.createForTarget (PointName.ofSingle &quot;riemann&quot;)
+        Rule.createForTarget (PointName.ofSingle &quot;console&quot;)
       ] &gt;&gt;
       withInternalTargets Info [
-        Console.create (Console.empty) &quot;console&quot;
+        Console.create (Console.empty) (PointName.ofSingle &quot;console&quot;)
       ]
-    )
+    ) |&gt; Hopac.TopLevel.run
 
   Console.ReadKey true |&gt; ignore
   0
@@ -288,12 +288,14 @@ let main argv =
 
 <p>Now you can get a logger through the <code>Logging</code> module:</p>
 <p><strong>F#</strong></p>
-<pre class="prettyprint well"><code class="fsharp">let logger = Logging.getCurrentLogger ()
+<pre><code class="fsharp">let logger = Logging.getCurrentLogger ()
 let another = Logging.getLoggerByName &quot;Corp.App.Svc&quot;
+let writeLog x = Logary.Logger.log logger x |&gt; Hopac.TopLevel.start
+Logary.Message.eventDebug &quot;test&quot; |&gt; writeLog
 </code></pre>
 
 <p>or in <strong>C#</strong></p>
-<pre class="prettyprint well"><code class="csharp">namespace A {
+<pre><code class="csharp">namespace A {
   class X {
     static readonly Logger _logger = Logging.GetCurrentLogger();
     void XX () {
@@ -317,12 +319,12 @@ warning-levels of <code>LogLevel</code>.</p>
 an example of a Probe.</p>
 <h2 id="c-vb-facade">C# &amp; VB façade</h2>
 <p>This facade is useful when you're using C# </p>
-<pre class="prettyprint well"><code class="powershell">Install-Package Logary.CSharp
+<pre><code class="powershell">Install-Package Logary.CSharp
 </code></pre>
 
 <p>It adds extension methods to the <code>Logary</code> namespace. Just import the namespace
 to get access to the extension methods, while having the nuget/dll referenced.</p>
-<pre class="prettyprint well"><code class="csharp">using System;
+<pre><code class="csharp">using System;
 using System.Data.SQLite;
 using System.Text.RegularExpressions;
 using FluentMigrator.Runner.Announcers;
@@ -407,9 +409,7 @@ namespace Logary.Specs.Examples
         }
     }
 }
-</code></pre>
-
-</div>
+</code></pre></div>
         </div>
 
         

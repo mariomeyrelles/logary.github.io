@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    <url>
+     <loc>https://logary.github.io//</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>https://logary.github.io//api/</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>https://logary.github.io//targets/overview/</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://logary.github.io//targets/textwriter/</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://logary.github.io//targets/console/</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://logary.github.io//targets/debugger/</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://logary.github.io//targets/file/</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://logary.github.io//targets/logstash/</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://logary.github.io//targets/graphite/</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://logary.github.io//targets/elmahio/</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://logary.github.io//targets/logentries/</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://logary.github.io//targets/loggr/</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://logary.github.io//targets/riemann/</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://logary.github.io//targets/db/</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://logary.github.io//targets/nimrod/</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://logary.github.io//targets/dash/</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://logary.github.io//targets/zipkin/</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>https://logary.github.io//adapters/overview/</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://logary.github.io//adapters/eventstore/</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://logary.github.io//adapters/suave/</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://logary.github.io//adapters/topshelf/</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://logary.github.io//adapters/log4net/</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>https://logary.github.io//advanced/overview/</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://logary.github.io//advanced/v2-refactor/</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://logary.github.io//advanced/reservoirs/</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://logary.github.io//advanced/writing-a-target/</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://logary.github.io//advanced/writing-a-metric/</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://logary.github.io//advanced/thinking-about-time/</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://logary.github.io//advanced/contributing/</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+    <url>
+     <loc>https://logary.github.io//about/</loc>
+     <lastmod>2016-05-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+</urlset>

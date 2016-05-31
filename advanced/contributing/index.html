@@ -9,14 +9,14 @@
         <link rel="canonical" href="https://logary.github.io/advanced/contributing/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-        <title>Contributing - Logary</title>
+        <title>Contributing</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
         <link href="../../css/prettify-1.0.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
         
-            <link href="../../css/fixes.css" rel="stylesheet" />
+            <link href="../../../../css/fixes.css" rel="stylesheet" />
         
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -251,7 +251,7 @@
 <p>Coding style: pascalCase, 2 space intent. Use feature branches, PR against
 master. Use immutable data structures and tail recursion.</p>
 <p>Use <code>module Logary.MyModule</code> or <code>module Logary.SubNs.MyModule</code>, not:</p>
-<pre class="prettyprint well"><code class="fsharp">namespace Logary.SubNs
+<pre><code class="fsharp">namespace Logary.SubNs
 
 module MyModule =
   ...
@@ -260,8 +260,7 @@ module MyModule =
 <p>If introducing a new type + corresponding module (see <code>Measure.fs</code> for example):</p>
 <p>Two-phase configuration; first create immutable configuration, then compile it.
 Second step: create running instances of everything from the configuration. This
-ensures that a logary instance is correct by construction.</p>
-</div>
+ensures that a logary instance is correct by construction.</p></div>
         </div>
 
         

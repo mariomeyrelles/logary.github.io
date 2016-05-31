@@ -9,14 +9,14 @@
         <link rel="canonical" href="https://logary.github.io/targets/textwriter/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-        <title>TextWriter - Logary</title>
+        <title>TextWriter</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
         <link href="../../css/prettify-1.0.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
         
-            <link href="../../css/fixes.css" rel="stylesheet" />
+            <link href="../../../../css/fixes.css" rel="stylesheet" />
         
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -250,10 +250,45 @@
 <h1 id="logarytextwriter">Logary.TextWriter</h1>
 <p><strong>For LogLines | builtin</strong></p>
 <p>Write to any text writer - such as one from <code>System.IO.File.OpenWrite</code>.</p>
-<pre class="prettyprint well"><code class="powershell">Install-Package Logary
+<pre><code class="powershell">Install-Package Logary
 </code></pre>
 
-</div>
+<pre><code class="fsharp">open System
+open System.IO
+
+open NodaTime
+open Logary
+open Logary.Configuration
+open Logary.Targets
+open Logary.Metrics
+
+#if INTERACTIVE
+let path = __SOURCE_DIRECTORY__
+#else
+let path = System.Reflection.Assembly.GetExecutingAssembly().Location |&gt; Path.GetDirectoryName
+[&lt;EntryPoint&gt;]
+#endif
+let main argv =
+  use logary =
+    withLogaryManager &quot;TextWriter.Example&quot; (
+      withTargets [
+        Logary.Targets.TextWriter.create(
+            let textConf = 
+                TextWriter.TextWriterConf.create(
+                    Path.Combine(path, DateTime.UtcNow.ToString(&quot;yyyy-MM&quot;) + &quot;-happy.log&quot;) |&gt; File.AppendText, 
+                    Path.Combine(path, DateTime.UtcNow.ToString(&quot;yyyy-MM&quot;) + &quot;-sad.log&quot;) |&gt; File.AppendText)
+            let newConf = { textConf with flush = true }
+            newConf
+        ) (PointName.ofSingle &quot;filelogger&quot;)
+      ] &gt;&gt;
+      withRules [
+        Rule.createForTarget (PointName.ofSingle &quot;filelogger&quot;)
+      ]
+    ) |&gt; Hopac.TopLevel.run
+
+  Console.ReadKey true |&gt; ignore
+  0
+</code></pre></div>
         </div>
 
         

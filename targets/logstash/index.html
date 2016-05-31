@@ -9,14 +9,14 @@
         <link rel="canonical" href="https://logary.github.io/targets/logstash/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-        <title>Logstash - Logary</title>
+        <title>Logstash</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
         <link href="../../css/prettify-1.0.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
         
-            <link href="../../css/fixes.css" rel="stylesheet" />
+            <link href="../../../../css/fixes.css" rel="stylesheet" />
         
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -259,7 +259,7 @@ a log router that can move your logs to the best location available.</p>
 <p><strong>Manage events and logs</strong>. Elasticsearch works seamlessly with Logstash to
 collect, parse, index, and search logs</p>
 </blockquote>
-<pre class="prettyprint well"><code class="powershell">Install-Package Logary
+<pre><code class="powershell">Install-Package Logary
 </code></pre>
 
 <p><img alt="Logstash" src="https://raw.githubusercontent.com/logary/logary-assets/master/targets/logstash.png" /></p>
@@ -268,7 +268,7 @@ much to set up to get started. This means that once in a blue moon you'll
 lose log lines - but often this is not a big issue, because you don't take
 application business logic decisions on log lines.</p>
 <h2 id="api">API</h2>
-<pre class="prettyprint well"><code class="fsharp">open System
+<pre><code class="fsharp">open System
 
 open Logary
 open Logary.Configuration
@@ -295,7 +295,7 @@ let main argv =
 <h2 id="logstash-config">Logstash config</h2>
 <p>Logstash can only take 'json' codec from things that do proper framing, such as
 message brokers.</p>
-<pre class="prettyprint well"><code>input {
+<pre><code>input {
   tcp {
     codec =&gt; json_lines { charset =&gt; &quot;UTF-8&quot; }
     host  =&gt; &quot;0.0.0.0&quot;
@@ -303,9 +303,7 @@ message brokers.</p>
     type  =&gt; &quot;apps&quot;
   }
 }
-</code></pre>
-
-</div>
+</code></pre></div>
         </div>
 
         

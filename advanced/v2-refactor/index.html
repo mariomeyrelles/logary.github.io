@@ -9,14 +9,14 @@
         <link rel="canonical" href="https://logary.github.io/advanced/v2-refactor/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-        <title>v2.0-refactor - Logary</title>
+        <title>v2.0-refactor</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
         <link href="../../css/prettify-1.0.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
         
-            <link href="../../css/fixes.css" rel="stylesheet" />
+            <link href="../../../../css/fixes.css" rel="stylesheet" />
         
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -308,7 +308,7 @@ and continuous running on SQL statements into a probe.</p>
 <p><a href="https://github.com/benjamine/JsonDiffPatch">Extend with JsonDiffPatch</a> to avoid sending full state every time.</p>
 <p>Instead of polling, open a Server-Sent Event socket and get all patches from there, continuously applying it to the in-memory rep.</p>
 <p>Make sure we can report same data:</p>
-<pre class="prettyprint well"><code>{
+<pre><code>{
   &quot;Timestamp&quot;:&quot;2014-07-26T22:54:52.6894+02:00&quot;,
   &quot;Gauges&quot;:{
       &quot;.NET Mb in all Heaps&quot;:732.27,
@@ -617,9 +617,7 @@ and continuous running on SQL statements into a probe.</p>
         }
     }
 }
-</code></pre>
-
-</div>
+</code></pre></div>
         </div>
 
         
