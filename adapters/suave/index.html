@@ -240,7 +240,7 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#clavigeri-per-absensauxilium-invenies">Clavigeri per absensauxilium invenies</a></li>
+        <li class="main active"><a href="#clavigeri-per-absensauxilium-invenies">Using Suave 2.0 Adapter</a></li>
         
             <li><a href="#successu-amnis-quae-felix-expalluit-diversaque-fauni">Successu amnis quae felix expalluit diversaque fauni</a></li>
         
@@ -253,56 +253,95 @@
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="clavigeri-per-absensauxilium-invenies">Clavigeri per absensauxilium invenies</h1>
-<h2 id="successu-amnis-quae-felix-expalluit-diversaque-fauni">Successu amnis quae felix expalluit diversaque fauni</h2>
-<p>Lorem markdownum sanguinis ibat, arguis <em>velamina</em> sinistrae provolvi sinus
-quatiatur vita harenae <a href="http://www.youtube.com/watch?v=MghiBW3r65M">telum</a>
-Cynthia! <a href="http://omfgdogs.com/">Non</a> palluit eadem sacrilegos imis emicat
-urbesque exitium, progeniem orbem; te, in intus aeraque.</p>
-<blockquote>
-<p>Et quam falso vetustas; egressus lanam, parenti et tamen indoctum dum condi
-iaculum summo, potest pectore <strong>mihi</strong>. Petit victo quam falle adhuc motis.
-Sine eget, <a href="http://www.billmays.net/">subibis huic</a> ego aera amplectitur nunc,
-occupat gerere, illa.</p>
-</blockquote>
-<p>Pater celeremque illa consiliis illos agrestes, nec vertice ille, ore liquidarum
-gurgite. Potiturque vere <strong>relaxant</strong>, medios esset tuta tibi dat induruit copia
-in cum cum. Et exierat avidas inpugnante deum: eundi neque emisit in carmine
-occupat: pendentes. Pelopeia volucrem contigerant tradit: Palladis natam,
-passibus deo natam portus tenet quoniam <strong>totidemque infausto iuvenem</strong> nebulis.</p>
-<h2 id="illa-sustulit-quae-capacibus-vocantem-sollicitare-vocat">Illa sustulit quae capacibus vocantem sollicitare vocat</h2>
-<p>Ore pectus, carcere, trepidos nec fecit triumphis <em>prius palustribus mirantes</em>,
-onus. <strong>Pietas Samon</strong> meruit passurae dubitare magis. Ad non prementem atque
-conbibit genus et texit properantibus domus credere lintea: et vocat e obstat.
-Manent per Atrides oro medio crines sed hunc laevum absumitur Pentheus satis;
-enim.</p>
-<blockquote>
-<p>Famem est par, quam dixit conatur Syenites vulnere
-<a href="http://www.lipsum.com/">silvas</a> sequitur Echione; aura flamma ego morte
-domus? Cunctos fecit Rhamnusidis annum intravere vagantem finire, <a href="http://html9responsiveboilerstrapjs.com/">audit
-voco</a>, nihil.</p>
-</blockquote>
-<h2 id="est-et-similis-annis-vides-ut-litora">Est et similis annis vides ut litora</h2>
-<p>Coeperunt facit accensus et duro membra referre <em>ruborem diffugiunt terra</em>?
-Achillem dentes tum, et silvarum saevam, esse iterumque animalia piscem; in
-caedis mihi magni aequoris sagitta ument.</p>
-<ol>
-<li>Echecli accipio ignavis</li>
-<li>Pedum loqueretur mater</li>
-<li>Nec nec mutantur tuos ipse suum mora</li>
-<li>Eunti latentia haberet Simois primum Iuppiter capillis</li>
-<li>Tectis illo spumantiaque ille</li>
-<li>Adsuetos ille concipit mei</li>
-</ol>
-<p><strong>Labant</strong> luctus rupes os meritis nomen <a href="http://www.wtfpl.net/">quam</a> causas,
-quam notitiamque orbis modusque per inquit paelice me sic se inmergitque. Esse
-cognovit, diu aggere. Est modo verbis qui totidemque <strong>angues</strong>, videri miseri
-quoque ostendens. Credis peremi quondam pericula membris evicere, inducta
-strepitans Delphice tuus!</p>
-<p>Manifesta et vulnera abscedit vestigia Alcmene ora ora aperti casus Medea
-moratum verba oculos et gaudete. Lingua faciam puerilibus rursus, corpora,
-miliaque dirimant orbe, fides.</p></div>
-        </div>
+<h1 id="using-suave-20-adapter">Using Suave 2.0 Adapter</h1>
+
+<p>In order to integrate Logary with Suave 2.0, the strategy now is to use the adapter that basically receives events from 
+    Suave and makes them available to be used inside Logary. </p>
+
+<p>In the example below, we configure are able to configure Suave adapter and then filter the logs to show only Information 
+    log level. The idea is that you can configure a rule in Logary to filter the logs received to fit your needs. Let's how 
+    this works: </p>
+
+<p><strong>F#</strong></p>
+<pre><code class="fsharp">
+open System
+
+open Suave
+open Suave.Successful
+open Suave.RequestErrors
+open Suave.Operators
+open Suave.RequestErrors
+open Suave.Filters
+open Suave.Logging
+
+open Logary
+open Logary
+open Logary.Configuration
+open Logary.Targets
+open Logary.Metric
+open Logary.Metrics
+open Logary.Message
+open Logary.Adapters.Facade
+
+open NodaTime
+open Hopac
+
+
+
+[<EntryPoint>]
+let main argv = 
+
+    // this is our logManager.
+    let logary =
+      withLogaryManager "TestApi" (
+        
+        // configure here some rules. You can change parts of the rule using the construct below.
+        // note also that you can add many different rules here. So here we are adding to the rules 
+        // an instruction to configure the "console" target, with the minimum log level to be Info, which
+        // will hide verbose logs of Suave. 
+        withRules 
+            [
+               { Rule.createForTarget "console" with level = Info  }
+            ]
+        // the literate console target is used to output text in different colors for different types of logs. Much 
+        // nicer than the normal console.
+        >> withTarget (LiterateConsole.create LiterateConsole.empty "console")
+        
+        // the Logary configuration itself is a representation of a Hopac job, that is only defined but not executed
+        // until the it's told to be executed. So we use run to ask for immediate execution.
+      ) |> run
+
+    // this is the most important part - initializes the Logary with a Suave logger.
+    LogaryFacadeAdapter.initialise<Suave.Logging.Logger> logary
+
+    // gets a logger from the context of this function
+    let logger = Logging.getCurrentLogger()
+
+    // this is a function that is called when a post request is received. Note that the logger here is the Logary's one.
+    let logInsidePost (logger: Logger) =
+        
+        // imperatively logs something to be shown on the coloured console defined above. The log level defined on the 
+        // rule above still applies here. Only information and above will be shown.
+        logger.info (
+            eventX  "********hello world************"
+        )
+        OK "postOk"
+
+
+    let testApi  = 
+        choose
+            [
+                // when a POST request is received, the function will run and log normally.
+                POST >=> path "/post" >=> warbler (fun x -> logInsidePost logger)
+                NOT_FOUND "Found no handlers"
+            ]
+   
+    // we don't need to change the config anymore, as we used to do in previous version of Suave
+    startWebServer defaultConfig testApi 
+    
+    Console.ReadLine() |> ignore
+    0
+</code></pre>
 
         
 
